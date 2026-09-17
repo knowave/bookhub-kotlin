@@ -15,12 +15,11 @@ spring:
     password: ${DB_PASSWORD}
 
   jpa:
-    open-in-view: true
+    open-in-view: false
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     properties:
       hibernate:
-        show_sql: true
         format_sql: true
         highlight_sql: true
 
@@ -28,11 +27,9 @@ spring:
     console:
       enabled: true
 
-  logging:
-    pattern:
-      console: '[%d{HH:mm:ss.SSS}][%-5level][%logger.%method:line%line] - %msg%n'
-    level:
-      org:
-        hibernate:
-          SQL: debug
-          type.descriptor.sql: trace
+logging:
+  pattern:
+    console: '[%d{HH:mm:ss.SSS}][%-5level][%logger.%method:line%line] - %msg%n'
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.orm.jdbc.bind: trace
