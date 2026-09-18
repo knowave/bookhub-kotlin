@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"echo \\\"=== 통합 행 원문 ===\\\" && grep -n 'extensions' docs/03-api.md | head -3\\necho\\npython3 - <<'PY'\\nimport re, sys\\nok, fail = [], []\\ndef chk(c, m): (ok if c else fail).append(m)\\nA = open...",
+  "error": "Exit code 1\n=== 통합 행 원문 ===\n174:| POST | `/api/v1/loans/{id}/extensions` | MEMBER | LIBRARIAN 호출 시 복본의 지점 == `libraryId` | 대출 연장 | **UC-13, UC-14** |\n180:반납은 `/return`(단수), 연장은 `/extensions`(복수)다. 반납은 대출당 한 번뿐인 종결 행위이고, 연장은 최대 2회까지 누적되는 사건이기 때문이다(→ L-4).\n616:### 대출 연장 · `POST /api/v1/loans/{id}/extensions` · UC-13, UC-14\n\nPASS 2\n  ✓ 통합 행 소속 제약이 LIBRARIAN 경로로 한정 표기: 'LIBRARIAN 호출 시 복본의 지점 == `libraryId`'\n  ✓ 단일행 소속제약 UC + UC-14(통합행) == P-8 적용 대상 (차이: 없음)\nFAIL 1\n  ✗ 통합 행 1개: [('/api/v1/loans/{id}/...",
+  "timestamp": "2026-09-18T05:41:58.528Z",
+  "retry_count": 3
+}

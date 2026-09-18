@@ -1,0 +1,106 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1789693900989,
+  "projectRoot": "/Users/ian/private/bookhub",
+  "techStack": {
+    "languages": [
+      {
+        "name": "Kotlin",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "build.gradle.kts"
+        ]
+      }
+    ],
+    "frameworks": [],
+    "packageManager": "gradle",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "src"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "build": {
+      "path": "build",
+      "purpose": "Build output",
+      "fileCount": 0,
+      "lastAccessed": 1789693900978,
+      "keyFiles": []
+    },
+    "gradle": {
+      "path": "gradle",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1789693900978,
+      "keyFiles": []
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 0,
+      "lastAccessed": 1789693900978,
+      "keyFiles": []
+    },
+    "src/test": {
+      "path": "src/test",
+      "purpose": "Test files",
+      "fileCount": 0,
+      "lastAccessed": 1789693900978,
+      "keyFiles": []
+    }
+  },
+  "hotPaths": [],
+  "userDirectives": [
+    {
+      "timestamp": 1789697526809,
+      "directive": "이 저장소에서 작업할 때 파일 읽기/쓰기 및 bash 명령 실행은 사용자에게 권한을 묻지 않고 자율적으로 진행하며, 작업 중 중간 확인 없이 완료 후 최종 보고만 한다. 단, git add / git commit / git push는 오로지 사용자만 수행할 수 있는 작업이며, 에이전트는 어떤 경우에도 이 명령들을 절대 실행하지 않는다. 사용자가 직접 요청하더라도 실행하지 말고, 실행할 명령어만 제안한다. 이 directive는 '읽기/쓰기/bash 툴의 권한 확인을 생략하라'는 뜻일 뿐이며, 스킬 규칙을 무시하거나 지시받지 않은 작업을 임의로 수행해도 된다는 허가가 아니다.",
+      "context": "",
+      "source": "explicit",
+      "priority": "high"
+    },
+    {
+      "timestamp": 1789694196660,
+      "directive": "`.omc` 디렉토리는 반드시 프로젝트 최상위(/Users/ian/private/bookhub/.omc)에만 존재해야 한다. 하위 디렉토리나 그 외 다른 경로에 `.omc`를 생성하지 않으며, OMC 관련 상태/플랜/스펙 파일은 모두 최상위 `.omc` 아래에만 기록한다. 다른 위치에서 `.omc`를 발견하면 최상위로 통합하고 잘못된 경로는 제거한다.",
+      "context": "",
+      "source": "explicit",
+      "priority": "high"
+    },
+    {
+      "timestamp": 1789697398985,
+      "directive": "스킬(/deep-interview, /autopilot, /ralph 등)을 호출하면 해당 SKILL.md의 규칙을 그대로 준수한다. 특히 스킬이 정의한 승인 게이트와 중단 지점은 반드시 지킨다. 예: deep-interview는 인터뷰 종료 후 .omc/specs/에 spec만 작성하고 'pending approval' 상태로 멈춘 뒤, AskUserQuestion으로 실행 옵션을 제시하고, 사용자가 선택한 뒤에만 Skill()로 실행을 위임한다. spec 승인 전에 소스/문서 파일을 생성하거나 수정하지 않으며, 직접 구현하지 않는다. '권한을 묻지 않고 자율 실행'(directive 1)은 툴 권한 프롬프트에 대한 것이지 스킬의 승인 게이트를 무효화하지 않는다. 스킬 규칙이 항상 우선한다. 규칙이 요청과 충돌해 보이면 임의로 판단해 건너뛰지 말고, 실행 전에 그 충돌을 사용자에게 말한다.",
+      "context": "deep-interview Phase 5 게이트를 무시하고 직접 문서를 작성한 사례에서 도출",
+      "source": "explicit",
+      "priority": "high"
+    },
+    {
+      "timestamp": 1789697526809,
+      "directive": "지시받은 범위만 수행한다. 사용자가 명시한 산출물이 곧 작업 범위이며, 그 외의 파일을 새로 만들거나 기존 파일을 수정하지 않는다. '해두면 좋을 것 같은' 작업, 연관 문서, 부수적 정리 작업이 떠오르면 임의로 실행하지 말고 반드시 먼저 물어본다. 스스로 필요하다고 판단한 것과 사용자가 지시한 것을 구분하고, 전자는 제안으로만 제시한다. 대화 중 언급된 내용이라도 명시적 실행 지시가 아니면 실행 근거로 삼지 않는다.",
+      "context": "deep-interview에서 02-requirements.md만 요청받고 ADR/CONTEXT.md까지 승인 없이 작성한 사례에서 도출",
+      "source": "explicit",
+      "priority": "high"
+    }
+  ]
+}
