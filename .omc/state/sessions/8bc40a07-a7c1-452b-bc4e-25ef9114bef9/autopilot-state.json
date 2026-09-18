@@ -1,14 +1,13 @@
 {
   "active": false,
   "current_phase": "completed",
-  "task_description": "docs/adr/0001-book-bookcopy-separation.md 신규 작성",
+  "task_description": "docs/adr/0009-role-model-branching.md 신규 작성",
   "awaiting_confirmation": "false",
   "outcome": "completed",
-  "spec_path": ".omc/specs/deep-interview-adr-0001.md",
   "_meta": {
     "mode": "autopilot",
     "sessionId": "8bc40a07-a7c1-452b-bc4e-25ef9114bef9",
-    "updatedAt": "2026-09-18T06:49:42.478Z",
+    "updatedAt": "2026-09-18T09:00:11.902Z",
     "updatedBy": "state_write_tool"
   }
 }

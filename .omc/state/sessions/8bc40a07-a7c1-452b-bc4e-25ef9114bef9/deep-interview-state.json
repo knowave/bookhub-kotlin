@@ -1,17 +1,17 @@
 {
   "active": false,
   "current_phase": "handoff",
-  "spec_path": ".omc/specs/deep-interview-adr-0001.md",
+  "spec_path": ".omc/specs/deep-interview-adr-0003.md",
   "threshold": "0.2",
   "threshold_source": "default",
-  "final_ambiguity": "0.063",
+  "final_ambiguity": "0.070",
   "rounds": "2",
-  "approved_scope": "docs/adr/0001-book-bookcopy-separation.md only",
+  "approved_scope": "0003 new + 0002:75 / 0007:80 cleanup",
   "handoff_to": "autopilot",
   "_meta": {
     "mode": "deep-interview",
     "sessionId": "8bc40a07-a7c1-452b-bc4e-25ef9114bef9",
-    "updatedAt": "2026-09-18T06:47:54.222Z",
+    "updatedAt": "2026-09-18T08:07:59.166Z",
     "updatedBy": "state_write_tool"
   }
 }

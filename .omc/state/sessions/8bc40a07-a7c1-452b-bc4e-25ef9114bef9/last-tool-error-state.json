@@ -1,7 +1,7 @@
 {
   "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"echo \\\"=== 통합 행 원문 ===\\\" && grep -n 'extensions' docs/03-api.md | head -3\\necho\\npython3 - <<'PY'\\nimport re, sys\\nok, fail = [], []\\ndef chk(c, m): (ok if c else fail).append(m)\\nA = open...",
-  "error": "Exit code 1\n=== 통합 행 원문 ===\n174:| POST | `/api/v1/loans/{id}/extensions` | MEMBER | LIBRARIAN 호출 시 복본의 지점 == `libraryId` | 대출 연장 | **UC-13, UC-14** |\n180:반납은 `/return`(단수), 연장은 `/extensions`(복수)다. 반납은 대출당 한 번뿐인 종결 행위이고, 연장은 최대 2회까지 누적되는 사건이기 때문이다(→ L-4).\n616:### 대출 연장 · `POST /api/v1/loans/{id}/extensions` · UC-13, UC-14\n\nPASS 2\n  ✓ 통합 행 소속 제약이 LIBRARIAN 경로로 한정 표기: 'LIBRARIAN 호출 시 복본의 지점 == `libraryId`'\n  ✓ 단일행 소속제약 UC + UC-14(통합행) == P-8 적용 대상 (차이: 없음)\nFAIL 1\n  ✗ 통합 행 1개: [('/api/v1/loans/{id}/...",
-  "timestamp": "2026-09-18T05:41:58.528Z",
-  "retry_count": 3
+  "tool_input_preview": "{\"command\":\"python3 - <<'PY'\\nimport re, sys\\nok, fail = [], []\\ndef chk(c, m): (ok if c else fail).append(m)\\n\\na  = open('docs/adr/0003-uuid-primary-key.md', encoding='utf-8').read()\\nd1 = open('doc...",
+  "error": "Exit code 1\nPASS 51\n  ✓ 제목 `# 0003. ` (접두사 ADR- 없음)\n  ✓ 네 ADR 8섹션 완전 일치\n     ['상태', '맥락', '검토한 선택지', '결정', '근거', '포기한 것', '재검토 조건', '관련 문서']\n  ✓ 섹션 정확히 8개\n  ✓ 상태 = 채택 (2026-09-18)\n  ✓ 선택지 정확히 2개: ['(1) Long + IDENTITY', '(2) UUID']\n  ✓ (1) 이점 인정 문장\n  ✓   (1) 이점: B-tree 분할\n  ✓   (1) 이점: 크기 절반\n  ✓   (1) 이점: FK 곱셈\n  ✓   (1) 이점: 가독성\n  ✓   (1)이 더 나은 경우 인정\n  ✓   폄하 표현 없음: '명백히 나쁘'\n  ✓   폄하 표현 없음: '잘못된 선택'\n  ✓   폄하 표현 없음: '말이 안 되'\n  ✓ 근거: 첫째, 순차 식별자는 값 자체로 규모를 \n  ✓ 근거: 둘째, 애플리케이션에서 미리 생성할 수 \n  ✓ 근거: 셋째...",
+  "timestamp": "2026-09-18T08:10:06.760Z",
+  "retry_count": 1
 }
