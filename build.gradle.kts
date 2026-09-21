@@ -33,6 +33,9 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("tools.jackson.module:jackson-module-kotlin")
 
+	implementation("org.springframework.boot:spring-boot-starter-flyway")
+	implementation("org.flywaydb:flyway-database-postgresql")
+
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 
 	runtimeOnly("com.h2database:h2")
