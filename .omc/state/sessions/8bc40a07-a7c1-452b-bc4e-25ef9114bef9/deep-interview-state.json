@@ -1,17 +1,18 @@
 {
   "active": false,
   "current_phase": "handoff",
-  "spec_path": ".omc/specs/deep-interview-adr-0003.md",
+  "spec_path": ".omc/specs/deep-interview-entity-alignment.md",
   "threshold": "0.2",
   "threshold_source": "default",
-  "final_ambiguity": "0.070",
-  "rounds": "2",
-  "approved_scope": "0003 new + 0002:75 / 0007:80 cleanup",
-  "handoff_to": "autopilot",
+  "final_ambiguity": "0.080",
+  "rounds": "4",
+  "approved_scope": "entity layer only - Loan, BookCopy, User, Category",
+  "handoff_to": "team",
+  "model": "sonnet",
   "_meta": {
     "mode": "deep-interview",
     "sessionId": "8bc40a07-a7c1-452b-bc4e-25ef9114bef9",
-    "updatedAt": "2026-09-18T08:07:59.166Z",
+    "updatedAt": "2026-09-21T01:12:27.948Z",
     "updatedBy": "state_write_tool"
   }
 }

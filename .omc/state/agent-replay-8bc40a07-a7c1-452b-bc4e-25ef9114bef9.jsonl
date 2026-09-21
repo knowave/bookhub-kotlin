@@ -40,3 +40,14 @@
 {"t":0,"agent":"a558da7","agent_type":"unknown","event":"agent_stop","success":true,"duration_ms":0}
 {"t":0,"agent":"a0733d1","agent_type":"unknown","event":"agent_stop","success":true,"duration_ms":0}
 {"t":0,"agent":"a7e962e","agent_type":"unknown","event":"agent_stop","success":true,"duration_ms":0}
+{"t":0,"agent":"system","event":"skill_invoked","skill_name":"oh-my-claudecode:team"}
+{"t":0,"agent":"aworker","agent_type":"worker-user","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"aworker","agent_type":"worker-category","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"aworker","agent_type":"worker-user","event":"agent_stop","success":true,"duration_ms":40166}
+{"t":0,"agent":"aworker","agent_type":"worker-copy-loan","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"aworker","agent_type":"worker-category","event":"agent_stop","success":true,"duration_ms":40392}
+{"t":0,"agent":"aworker","agent_type":"worker-copy-loan","event":"agent_stop","success":true,"duration_ms":40269}
+{"t":0,"agent":"ac81415","agent_type":"unknown","event":"agent_stop","success":true,"duration_ms":0}
+{"t":0,"agent":"system","event":"keyword_detected","keyword":"autopilot"}
+{"t":0,"agent":"system","event":"mode_change","mode_from":"none","mode_to":"autopilot"}
+{"t":0,"agent":"a4fc898","agent_type":"unknown","event":"agent_stop","success":true,"duration_ms":0}

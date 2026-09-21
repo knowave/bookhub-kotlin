@@ -72,7 +72,38 @@
       "keyFiles": []
     }
   },
-  "hotPaths": [],
+  "hotPaths": [
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/book/entity/Category.kt",
+      "accessCount": 4,
+      "lastAccessed": 1789953276596,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/loan/entity/Loan.kt",
+      "accessCount": 4,
+      "lastAccessed": 1789953299508,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/user/entity/User.kt",
+      "accessCount": 3,
+      "lastAccessed": 1789953258995,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/library/entity/BookCopy.kt",
+      "accessCount": 2,
+      "lastAccessed": 1789953291665,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/library/entity/Library.kt",
+      "accessCount": 1,
+      "lastAccessed": 1789953240340,
+      "type": "file"
+    }
+  ],
   "userDirectives": [
     {
       "timestamp": 1789697526809,
