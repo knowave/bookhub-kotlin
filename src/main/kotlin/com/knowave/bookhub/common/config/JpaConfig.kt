@@ -1,4 +1,8 @@
 package com.knowave.bookhub.common.config
 
-class JpaConfig {
-}
+import org.springframework.context.annotation.Configuration
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing
+
+@Configuration
+@EnableJpaAuditing
+class JpaConfig
