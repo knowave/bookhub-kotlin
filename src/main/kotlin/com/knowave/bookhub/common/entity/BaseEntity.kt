@@ -24,10 +24,10 @@ abstract class BaseEntity {
     @CreatedDate
     @Column(nullable = false, updatable = false)
     lateinit var createdAt: Instant
-        protected set
+        internal set
 
     @LastModifiedDate
     @Column(nullable = false)
     lateinit var updatedAt: Instant
-        protected set
+        internal set
 }
