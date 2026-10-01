@@ -59,3 +59,12 @@ fun createActiveLibrarian(
     library = library,
     createdAt = createdAt,
 ).apply { approve() }
+
+fun User.asPersisted(
+    id: UUID = UUID.randomUUID(),
+    createdAt: Instant = Instant.now()
+): User = apply {
+    this.id = id
+    this.createdAt = createdAt
+    this.updatedAt = createdAt
+}
