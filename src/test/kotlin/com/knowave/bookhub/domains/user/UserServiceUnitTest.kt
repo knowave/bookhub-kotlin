@@ -10,8 +10,11 @@ import com.knowave.bookhub.domains.user.service.dto.CreateLibrarianCommand
 import com.knowave.bookhub.domains.user.service.dto.CreateMemberCommand
 import com.knowave.bookhub.fixture.asPersisted
 import com.knowave.bookhub.fixture.createLibrary
+import com.knowave.bookhub.fixture.createMember
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.core.spec.style.DescribeSpec
+import io.kotest.matchers.nulls.shouldBeNull
+import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
 import io.mockk.every
 import io.mockk.mockk
@@ -90,5 +93,38 @@ class UserServiceUnitTest : DescribeSpec({
         }
     }
 
+    describe("authenticate") {
+        val email = "test@test.com"
+        val encodedPassword = "encoded-password"
+        val rawPassword = "test12345!"
 
+        it ("사용자 비밀번호 검증 성공") {
+
+            every { userRepository.findByEmail(email) } returns createMember(email = email, password = encodedPassword)
+            every { passwordEncoder.matches(rawPassword, encodedPassword) } returns true
+
+            val result = sut.authenticate(email, rawPassword)
+
+            result.shouldNotBeNull()
+        }
+
+        it ("사용자의 비밀번호가 일치하지 않을 경우 null을 반환한다") {
+
+            every { userRepository.findByEmail(email) } returns createMember(email = email, password = encodedPassword)
+            every { passwordEncoder.matches(rawPassword, encodedPassword) } returns false
+
+            val result = sut.authenticate(email, rawPassword)
+
+            result.shouldBeNull()
+        }
+
+        it ("사용자의 이메일이 존재하지 않는 이메일인 경우 null을 반환한다") {
+
+            every { userRepository.findByEmail(email) } returns null
+
+            val result = sut.authenticate(email, rawPassword)
+
+            result.shouldBeNull()
+        }
+    }
 })
