@@ -1,6 +1,7 @@
 package com.knowave.bookhub.domains.user
 
 import com.knowave.bookhub.common.exception.EmailDuplicatedException
+import com.knowave.bookhub.common.exception.UserNotPendingException
 import com.knowave.bookhub.domains.library.service.LibraryService
 import com.knowave.bookhub.domains.user.entity.User
 import com.knowave.bookhub.domains.user.entity.UserStatus
@@ -9,8 +10,10 @@ import com.knowave.bookhub.domains.user.service.UserServiceImpl
 import com.knowave.bookhub.domains.user.service.dto.CreateLibrarianCommand
 import com.knowave.bookhub.domains.user.service.dto.CreateMemberCommand
 import com.knowave.bookhub.fixture.asPersisted
+import com.knowave.bookhub.fixture.createActiveLibrarian
 import com.knowave.bookhub.fixture.createLibrary
 import com.knowave.bookhub.fixture.createMember
+import com.knowave.bookhub.fixture.createPendingLibrarian
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.matchers.nulls.shouldBeNull
@@ -125,6 +128,31 @@ class UserServiceUnitTest : DescribeSpec({
             val result = sut.authenticate(email, rawPassword)
 
             result.shouldBeNull()
+        }
+    }
+
+    describe("approveLibrarian") {
+        val librarianId = UUID.randomUUID()
+
+        it("승인 대기중인 사서를 승인하면 상태가 PENDING에서 ACTIVE로 변경된다") {
+
+            every { userRepository.findWithLibraryById(librarianId) } returns createPendingLibrarian(id = librarianId)
+
+            val result = sut.approveLibrarian(librarianId)
+
+            result.status shouldBe UserStatus.ACTIVE
+        }
+
+        it("이미 승인된 사를 승인하면 UserNotPendingException이 발생한다") {
+            val activeLibrarian = createActiveLibrarian(id = librarianId)
+
+            every { userRepository.findWithLibraryById(librarianId) } returns activeLibrarian
+
+            val exception = shouldThrow<UserNotPendingException> {
+                sut.approveLibrarian(librarianId)
+            }
+
+            exception.code shouldBe "USER_NOT_PENDING"
         }
     }
 })
