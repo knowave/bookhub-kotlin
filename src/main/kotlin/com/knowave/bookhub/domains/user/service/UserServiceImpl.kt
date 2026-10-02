@@ -2,6 +2,7 @@ package com.knowave.bookhub.domains.user.service
 
 import com.knowave.bookhub.common.exception.EmailDuplicatedException
 import com.knowave.bookhub.common.exception.UserNotFoundException
+import com.knowave.bookhub.common.exception.UserNotPendingException
 import com.knowave.bookhub.domains.library.service.LibraryService
 import com.knowave.bookhub.domains.user.entity.User
 import com.knowave.bookhub.domains.user.entity.UserRole
@@ -59,6 +60,10 @@ class UserServiceImpl(
     override fun approveLibrarian(librarianId: UUID): UserResult {
         val user = userRepository.findWithLibraryById(librarianId)
             ?: throw UserNotFoundException(librarianId)
+
+        if (user.status !== UserStatus.PENDING)
+            throw UserNotPendingException(librarianId)
+
         user.approve()
         return UserResult.from(user)
     }
