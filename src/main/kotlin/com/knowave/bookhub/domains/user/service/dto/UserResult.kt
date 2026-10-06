@@ -1,5 +1,6 @@
 package com.knowave.bookhub.domains.user.service.dto
 
+import com.knowave.bookhub.domains.library.service.dto.LibraryRef
 import com.knowave.bookhub.domains.user.entity.User
 import com.knowave.bookhub.domains.user.entity.UserRole
 import com.knowave.bookhub.domains.user.entity.UserStatus

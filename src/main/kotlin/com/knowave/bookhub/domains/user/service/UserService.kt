@@ -18,7 +18,7 @@ interface UserService {
 
     fun getUser(userId: UUID): UserResult
 
-    fun getPendingLibrarians(pageable: Pageable): Page<UserResult>
+    fun getManyPendingLibrarians(pageable: Pageable): Page<UserResult>
 
     fun getUserEntity(userId: UUID): User
 

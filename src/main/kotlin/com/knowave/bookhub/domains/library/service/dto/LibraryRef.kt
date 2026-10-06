@@ -1,4 +1,4 @@
-package com.knowave.bookhub.domains.user.service.dto
+package com.knowave.bookhub.domains.library.service.dto
 
 import com.knowave.bookhub.domains.library.entity.Library
 import java.util.UUID

@@ -71,7 +71,7 @@ class UserServiceImpl(
     override fun getUser(userId: UUID): UserResult =
         UserResult.from(getUserEntity(userId))
 
-    override fun getPendingLibrarians(pageable: Pageable): Page<UserResult> =
+    override fun getManyPendingLibrarians(pageable: Pageable): Page<UserResult> =
         userRepository.findAllByRoleAndStatus(
             role = UserRole.LIBRARIAN,
             status = UserStatus.PENDING,
