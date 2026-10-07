@@ -1,4 +1,4 @@
-package com.knowave.bookhub.domains.library
+package com.knowave.bookhub.domains.library.repository
 
 import com.knowave.bookhub.domains.library.entity.Library
 import org.springframework.data.jpa.repository.JpaRepository

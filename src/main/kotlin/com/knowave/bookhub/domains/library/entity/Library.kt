@@ -20,4 +20,14 @@ class Library(
 
     @Column(nullable = false, length = 20, comment = "대표 전화번호")
     var phone: String,
-) : BaseEntity()
+) : BaseEntity() {
+
+    fun changeName(name: String) {
+        this.name = name
+    }
+
+    fun changeContact(address: String?, phone: String?) {
+        address?.let { this.address = it }
+        phone?.let { this.phone = it }
+    }
+}
