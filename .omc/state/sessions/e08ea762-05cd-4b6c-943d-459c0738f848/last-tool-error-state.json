@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"sed -i 's/hibernate.generate_statistics=true\\\"/hibernate.generate_statistics=true\\\", \\\"spring.jpa.properties.hibernate.default_batch_fetch_size=100\\\"/' src/test/kotlin/com/knowave/bookhub/...",
+  "error": "Exit code 1\nsed: 1: \"src/test/kotlin/com/kno ...\": bad flag in substitute command: 'y'",
+  "timestamp": "2026-10-13T05:29:15.284Z",
+  "retry_count": 1
+}
