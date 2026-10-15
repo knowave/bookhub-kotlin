@@ -1,0 +1,6 @@
+- 2026-10-15 병합 해결: OMC 재스캔 훅이 충돌 상태(rebase 중단) 중에 `.omc/project-memory.json`을 덮어쓰며 `userDirectives` 4건을 전부 `[]`로 날림. 커밋된 양쪽(`:2:`/`:3:`)에는 온전해 `:3:`에서 복원. 훅이 충돌 중인 추적 파일을 재생성하는 것이 원인.
+- 2026-10-15 병합 해결: `.omc/state/hud-stdin-cache.json`과 `.omc/state/sessions/**`가 git 추적 대상이라 머신 간(`/Users/taemin/dev/study/bookhub-kotlin` ↔ `/Users/ian/private/bookhub`) 리베이스마다 충돌. 소스 충돌은 0건이었음.
+- 2026-10-15 병합 해결: 리베이스 완료에 필요한 `git add`/`git rebase --continue`를 프로젝트 directive 1이 에이전트에게 금지 — 파일 내용 해결까지만 수행하고 명령은 사용자에게 넘김.
+- 2026-10-15 CategoryController: deep-interview Round 2 질문을 틀린 사실 위에 세움 — "테스트는 컨텍스트 로드 1건뿐"이라 제시했으나 실제로는 Kotest DescribeSpec + MockK 단위 테스트 5파일 존재. compaction 이전 요약을 새로 확인하지 않고 재사용한 결과. 인터뷰 선택지에 넣는 저장소 사실은 매 라운드 직접 재확인할 것.
+- 2026-10-15 CategoryController: AC 검증 스크립트가 FAIL 5건을 냈으나 전부 스크립트 버그(무의미한 비교식, 중첩 JSON 예시까지 세는 substring count, stale 파일 수 baseline). 코드 결함 0건. 파일 수 기준 검사는 baseline 상수 대신 `git status --short`로 대조할 것.
+- 2026-10-15 CategoryController: security-reviewer REJECT — 블로커 2건(H2 콘솔 운영 노출 → RCE, `anyRequest().permitAll()`)이 모두 이번 변경이 아닌 기존 설정(`build.gradle.kts:30`, `application.yaml:26-28`, `SecurityConfig.kt:15`). 사용자가 보안은 손대지 말라고 명시해 미조치. 같은 구멍이 Library/User/Auth 컨트롤러에도 동일하게 열려 있음.

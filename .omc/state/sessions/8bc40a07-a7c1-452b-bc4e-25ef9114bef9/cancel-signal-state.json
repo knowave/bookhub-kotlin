@@ -1,0 +1,8 @@
+{
+  "active": true,
+  "requested_at": "2026-10-15T06:32:30.750Z",
+  "expires_at": "2026-10-15T06:33:00.750Z",
+  "mode": "autopilot",
+  "source": "state_clear",
+  "target_state_sha256": "b51c6197f3ac2aa51cc625e0c532a2aa3c69c01298fe95ccbfb440eba6a32aec"
+}
