@@ -187,7 +187,7 @@ Spring Data `Pageable` 규약을 따른다.
 | PATCH | `/api/v1/libraries/{id}/contact` | LIBRARIAN | 대상 지점 == `libraryId` | 연락 정보(주소·전화) 수정 (→ P-5) | UC-18 |
 | PATCH | `/api/v1/libraries/{id}/name` | ADMIN | — | 지점명 수정 (→ P-5) | UC-18-1 |
 | POST | `/api/v1/categories` | ADMIN | — | 카테고리 생성 | UC-19 |
-| PATCH | `/api/v1/categories/{id}` | ADMIN | — | 카테고리 수정 | UC-20 |
+| PUT | `/api/v1/categories/{id}` | ADMIN | — | 카테고리 수정 (전체 교체) | UC-20 |
 | GET | `/api/v1/libraries` | 없음 | — | 지점 목록 | **보조** — UC-02에서 소속 지점을 고르려면 필요. 인증 전 호출 |
 | GET | `/api/v1/categories` | MEMBER | — | 카테고리 계층 목록 | **보조** — UC-08의 분류 선택, UC-06의 필터 선택에 필요 |
 
@@ -820,7 +820,7 @@ GET /api/v1/loans?overdueOnly=true&page=0&size=20
 **응답** — `201 Created`
 
 ```json
-{ "id": "c1...", "name": "일본소설", "parent": { "id": "c0...", "name": "문학" }, "path": ["문학", "일본소설"] }
+{ "id": "c1...", "name": "일본소설", "children": [] }
 ```
 
 **에러**
@@ -832,23 +832,25 @@ GET /api/v1/loans?overdueOnly=true&page=0&size=20
 
 ---
 
-### 카테고리 수정 · `PATCH /api/v1/categories/{id}` · UC-20
+### 카테고리 수정 · `PUT /api/v1/categories/{id}` · UC-20
 
-**요청** — path `id`, body (부분 수정)
+**요청** — path `id`, body (전체 교체)
 
 | 필드 | 타입 | 제약 |
 |------|------|------|
-| `name` | string? | 선택 |
-| `parentId` | UUID? | 자기 자신·자신의 하위 지정 불가 (→ C-2) |
+| `name` | string | 필수 |
+| `parentId` | UUID? | 자기 자신·자신의 하위 지정 불가 (→ C-2). **생략하면 최상위 분류로 이동한다** |
 
 ```json
-{ "parentId": "c9..." }
+{ "name": "일본소설", "parentId": "c9..." }
 ```
+
+부분 수정이 아니라 전체 교체다. 따라서 상위 분류를 그대로 두려면 **현재 `parentId`를 다시 실어 보내야 한다.** 빠뜨리면 그 분류가 최상위로 올라가고 하위 트리가 통째로 따라 올라간다.
 
 **응답** — `200 OK`
 
 ```json
-{ "id": "c1...", "name": "일본소설", "parent": { "id": "c9...", "name": "외국문학" }, "path": ["외국문학", "일본소설"] }
+{ "id": "c1...", "name": "일본소설", "children": [] }
 ```
 
 **에러**

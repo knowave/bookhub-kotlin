@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"python3 - <<'PY'\\nimport re, sys\\nok, fail = [], []\\ndef chk(c, m): (ok if c else fail).append(m)\\n\\na  = open('docs/adr/0003-uuid-primary-key.md', encoding='utf-8').read()\\nd1 = open('doc...",
-  "error": "Exit code 1\nPASS 51\n  ✓ 제목 `# 0003. ` (접두사 ADR- 없음)\n  ✓ 네 ADR 8섹션 완전 일치\n     ['상태', '맥락', '검토한 선택지', '결정', '근거', '포기한 것', '재검토 조건', '관련 문서']\n  ✓ 섹션 정확히 8개\n  ✓ 상태 = 채택 (2026-09-18)\n  ✓ 선택지 정확히 2개: ['(1) Long + IDENTITY', '(2) UUID']\n  ✓ (1) 이점 인정 문장\n  ✓   (1) 이점: B-tree 분할\n  ✓   (1) 이점: 크기 절반\n  ✓   (1) 이점: FK 곱셈\n  ✓   (1) 이점: 가독성\n  ✓   (1)이 더 나은 경우 인정\n  ✓   폄하 표현 없음: '명백히 나쁘'\n  ✓   폄하 표현 없음: '잘못된 선택'\n  ✓   폄하 표현 없음: '말이 안 되'\n  ✓ 근거: 첫째, 순차 식별자는 값 자체로 규모를 \n  ✓ 근거: 둘째, 애플리케이션에서 미리 생성할 수 \n  ✓ 근거: 셋째...",
-  "timestamp": "2026-09-18T08:10:06.760Z",
-  "retry_count": 1
-}
