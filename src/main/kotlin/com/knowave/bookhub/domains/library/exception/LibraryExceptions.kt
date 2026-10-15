@@ -1,4 +1,6 @@
-package com.knowave.bookhub.common.exception
+package com.knowave.bookhub.domains.library.exception
+
+import com.knowave.bookhub.common.exception.BusinessException
 
 import org.springframework.http.HttpStatus
 import java.util.UUID

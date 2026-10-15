@@ -1,8 +1,8 @@
 package com.knowave.bookhub.domains.book.service
 
-import com.knowave.bookhub.common.exception.CategoryCircularReferenceException
-import com.knowave.bookhub.common.exception.CategoryNotFoundException
 import com.knowave.bookhub.domains.book.entity.Category
+import com.knowave.bookhub.domains.book.exception.CategoryCircularReferenceException
+import com.knowave.bookhub.domains.book.exception.CategoryNotFoundException
 import com.knowave.bookhub.domains.book.repository.CategoryRepository
 import com.knowave.bookhub.domains.book.service.dto.CategoryResult
 import com.knowave.bookhub.domains.book.service.dto.CreateCategoryCommand

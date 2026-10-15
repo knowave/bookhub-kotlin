@@ -1,6 +1,6 @@
 package com.knowave.bookhub.domains.library.service
 
-import com.knowave.bookhub.common.exception.LibraryNotFoundException
+import com.knowave.bookhub.domains.library.exception.LibraryNotFoundException
 import com.knowave.bookhub.domains.library.repository.LibraryRepository
 import com.knowave.bookhub.domains.library.entity.Library
 import com.knowave.bookhub.domains.library.service.dto.CreateLibraryCommand

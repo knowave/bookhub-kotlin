@@ -75,8 +75,8 @@
   "hotPaths": [
     {
       "path": "src/main/kotlin/com/knowave/bookhub/domains/book/entity/Category.kt",
-      "accessCount": 4,
-      "lastAccessed": 1789953276596,
+      "accessCount": 5,
+      "lastAccessed": 1792047092621,
       "type": "file"
     },
     {
@@ -101,6 +101,72 @@
       "path": "src/main/kotlin/com/knowave/bookhub/domains/library/entity/Library.kt",
       "accessCount": 1,
       "lastAccessed": 1789953240340,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/library/service/dto/LibraryRef.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792047091420,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/library/controller/dto/LibraryRefResponse.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792047091672,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/common/exception/LibraryExceptions.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792047091912,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/book/repository/CategoryRepository.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792047092147,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/book/service/dto/CreateCategoryCommand.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792047092413,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/user/service/dto/UserResult.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792047113758,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/book/controller/dto/CreateCategoryRequest.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792047114155,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/book/entity/Book.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792047114452,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/library/service/LibraryService.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792047141579,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/library/service/LibraryServiceImpl.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792047141936,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/book/controller/CategoryController.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792047142348,
       "type": "file"
     }
   ],
@@ -130,6 +196,13 @@
       "timestamp": 1789697526809,
       "directive": "지시받은 범위만 수행한다. 사용자가 명시한 산출물이 곧 작업 범위이며, 그 외의 파일을 새로 만들거나 기존 파일을 수정하지 않는다. '해두면 좋을 것 같은' 작업, 연관 문서, 부수적 정리 작업이 떠오르면 임의로 실행하지 말고 반드시 먼저 물어본다. 스스로 필요하다고 판단한 것과 사용자가 지시한 것을 구분하고, 전자는 제안으로만 제시한다. 대화 중 언급된 내용이라도 명시적 실행 지시가 아니면 실행 근거로 삼지 않는다.",
       "context": "deep-interview에서 02-requirements.md만 요청받고 ADR/CONTEXT.md까지 승인 없이 작성한 사례에서 도출",
+      "source": "explicit",
+      "priority": "high"
+    },
+    {
+      "timestamp": 1792049866681,
+      "directive": "도메인에서만 사용될 예외는 도메인별 패키지의 exception 경로에 둔다 (domains/book/exception/, domains/library/exception/, domains/user/exception/). 여러 도메인이 공유하는 예외 인프라 — BusinessException, ErrorResponse, GlobalExceptionHandler — 만 common/exception에 남긴다. docs/03-api.md:59의 방침과 같다. 새 도메인 예외를 만들 때 common/exception에 두지 말 것.",
+      "context": "2026-10-15 사용자 지시로 common/exception 일괄에서 도메인별 분리로 변경. 이전에 반대 내용으로 저장돼 있던 directive를 대체함.",
       "source": "explicit",
       "priority": "high"
     }

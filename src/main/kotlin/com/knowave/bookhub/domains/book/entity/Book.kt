@@ -36,19 +36,17 @@ class Book(
     @Column(nullable = false, comment = "출간일")
     var publishedAt: LocalDate,
 
+    description: String? = null,
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id", nullable = false, comment = "도서 분류")
     var category: Category,
 ) : BaseEntity() {
 
     @Column(length = 2000, comment = "도서 소개. 등록되지 않을 수 있다")
-    var description: String? = null
+    var description: String? = description
 
     fun changeCategory(category: Category) {
         this.category = category
-    }
-
-    fun updateDescription(description: String?) {
-        this.description = description
     }
 }

@@ -1,12 +1,12 @@
 package com.knowave.bookhub.domains.user.service
 
-import com.knowave.bookhub.common.exception.EmailDuplicatedException
-import com.knowave.bookhub.common.exception.UserNotFoundException
-import com.knowave.bookhub.common.exception.UserNotPendingException
 import com.knowave.bookhub.domains.library.service.LibraryService
 import com.knowave.bookhub.domains.user.entity.User
 import com.knowave.bookhub.domains.user.entity.UserRole
 import com.knowave.bookhub.domains.user.entity.UserStatus
+import com.knowave.bookhub.domains.user.exception.EmailDuplicatedException
+import com.knowave.bookhub.domains.user.exception.UserNotFoundException
+import com.knowave.bookhub.domains.user.exception.UserNotPendingException
 import com.knowave.bookhub.domains.user.repository.UserRepository
 import com.knowave.bookhub.domains.user.service.dto.CreateLibrarianCommand
 import com.knowave.bookhub.domains.user.service.dto.CreateMemberCommand
