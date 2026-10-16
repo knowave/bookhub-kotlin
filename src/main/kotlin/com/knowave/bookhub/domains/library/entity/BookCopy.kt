@@ -17,7 +17,7 @@ import jakarta.persistence.Table
     name = "book_copies",
     comment = "서가에 꽂혀 있는 실제 도서 한 권. 대출의 대상이 되는 단위",
     indexes = [
-        Index(name = "idx_copies_call_number", columnList = "call_number", unique = true),
+        Index(name = "idx_copies_call_number", columnList = "library_id, call_number", unique = true),
         Index(name = "idx_copies_lookup", columnList = "library_id, book_id, status"),
     ],
 )

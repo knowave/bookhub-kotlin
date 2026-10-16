@@ -1,34 +1,34 @@
 {
   "version": 1,
   "entries": {
+    "445ed27a3872b681d98190bae61ccb84954e1bc4e140df5370be958dee776b3a": {
+      "last_emitted_at_ms": 1792136050806,
+      "message": "Verify changes work after editing. Test functionality before marking complete."
+    },
     "1bb6914bc42b891c26d46c8ae2fd4f44071f59862e89dc550f4c82877b700216": {
-      "last_emitted_at_ms": 1792049883369,
+      "last_emitted_at_ms": 1792135944064,
       "message": "The boulder never stops. Continue until all tasks complete."
     },
     "79a93d4a2f8f50b95f852280616242fee1855dc99a3c75211917f55e72e95fae": {
-      "last_emitted_at_ms": 1792049819183,
+      "last_emitted_at_ms": 1792135853950,
       "message": "Use parallel execution for independent tasks. Use run_in_background for long operations (npm install, builds, tests)."
     },
-    "6c74fa68d2d00130ad16ced4842340417719878271f55602752387bc1679d739": {
-      "last_emitted_at_ms": 1792047135912,
-      "message": "Spawning agent: oh-my-claudecode:executor (sonnet) | Task: Book service and controller"
-    },
-    "831eb243927969c82754306a12facad7231b12f9de5c495777d61300ed6b3c12": {
-      "last_emitted_at_ms": 1792047110727,
-      "message": "Spawning agent: oh-my-claudecode:executor (sonnet) | Task: Book DTOs | Active agents: 1"
+    "c4522c1c041f04592a759a259bbdc1af297af26c248c58b677cdaa23a4397fae": {
+      "last_emitted_at_ms": 1792133754064,
+      "message": "Spawning agent: oh-my-claudecode:executor (sonnet) | Task: BookCopy service and controller"
     },
     "466399dafa2d20f60587180bad0a07358eb7f2bce724df0ff682f038ad33f5ad": {
-      "last_emitted_at_ms": 1792047091265,
+      "last_emitted_at_ms": 1792133719743,
       "message": "Read multiple files in parallel when possible for faster analysis."
     },
-    "74a3a53849e132911378a22bba33bf837e58fd76b3e1e7f118746d31a3b9b12c": {
-      "last_emitted_at_ms": 1792047088705,
-      "message": "Spawning agent: oh-my-claudecode:executor (haiku) | Task: Book leaf files"
+    "b64fe7e3e815daf3bb75be614f6764ca314097baf1e4bdb91d3ec0525f42fe02": {
+      "last_emitted_at_ms": 1792133716569,
+      "message": "Spawning agent: oh-my-claudecode:executor (sonnet) | Task: BookCopy DTOs | Active agents: 1"
     },
-    "445ed27a3872b681d98190bae61ccb84954e1bc4e140df5370be958dee776b3a": {
-      "last_emitted_at_ms": 1792046892537,
-      "message": "Verify changes work after editing. Test functionality before marking complete."
+    "bf409f5c8c625b400fab67b12a4d0babb475ad24333072dd38630a29df89bb8c": {
+      "last_emitted_at_ms": 1792133692064,
+      "message": "Spawning agent: oh-my-claudecode:executor (haiku) | Task: BookCopy leaf files"
     }
   },
-  "updated_at": "2026-10-15T07:38:03.369Z"
+  "updated_at": "2026-10-16T07:34:10.806Z"
 }

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T07:50:41.134Z",
+  "updatedAt": "2026-10-16T07:35:23.862Z",
   "missions": [
     {
       "id": "session:8bc40a07-a7c1-452b-bc4e-25ef9114bef9:none",
@@ -7,15 +7,15 @@
       "name": "none",
       "objective": "Session mission",
       "createdAt": "2026-09-21T01:13:55.887Z",
-      "updatedAt": "2026-10-15T07:50:41.134Z",
+      "updatedAt": "2026-10-16T07:35:23.862Z",
       "status": "done",
-      "workerCount": 9,
+      "workerCount": 12,
       "taskCounts": {
-        "total": 9,
+        "total": 12,
         "pending": 0,
         "blocked": 0,
         "inProgress": 0,
-        "completed": 9,
+        "completed": 12,
         "failed": 0
       },
       "agents": [
@@ -27,7 +27,7 @@
           "currentStep": null,
           "latestUpdate": "completed",
           "completedSummary": null,
-          "updatedAt": "2026-10-15T07:50:41.134Z"
+          "updatedAt": "2026-10-16T07:35:23.862Z"
         },
         {
           "name": "worker-category:aworker",
@@ -108,64 +108,110 @@
           "latestUpdate": "completed",
           "completedSummary": null,
           "updatedAt": "2026-10-15T06:52:38.097Z"
+        },
+        {
+          "name": "bc-leaf:abc-lea",
+          "role": "bc-leaf",
+          "ownership": "abc-leaf-c1520d431ce2722c",
+          "status": "done",
+          "currentStep": null,
+          "latestUpdate": "completed",
+          "completedSummary": null,
+          "updatedAt": "2026-10-16T06:55:21.477Z"
+        },
+        {
+          "name": "bc-dto:abc-dto",
+          "role": "bc-dto",
+          "ownership": "abc-dto-2f2a875b8ea613d3",
+          "status": "done",
+          "currentStep": null,
+          "latestUpdate": "completed",
+          "completedSummary": null,
+          "updatedAt": "2026-10-16T06:55:39.191Z"
+        },
+        {
+          "name": "bc-service:abc-ser",
+          "role": "bc-service",
+          "ownership": "abc-service-bf6a2321fde50169",
+          "status": "done",
+          "currentStep": null,
+          "latestUpdate": "completed",
+          "completedSummary": null,
+          "updatedAt": "2026-10-16T06:56:25.197Z"
         }
       ],
       "timeline": [
         {
-          "id": "session-start:aworker-dto-72b2a9aacfba6e73:2026-10-15T06:51:51.170Z",
-          "at": "2026-10-15T06:51:51.170Z",
+          "id": "session-stop:abc-leaf-c1520d431ce2722c:2026-10-16T06:55:21.477Z",
+          "at": "2026-10-16T06:55:21.477Z",
+          "kind": "completion",
+          "agent": "bc-leaf:abc-lea",
+          "detail": "completed",
+          "sourceKey": "session-stop:abc-leaf-c1520d431ce2722c"
+        },
+        {
+          "id": "session-stop:abc-dto-2f2a875b8ea613d3:2026-10-16T06:55:39.191Z",
+          "at": "2026-10-16T06:55:39.191Z",
+          "kind": "completion",
+          "agent": "bc-dto:abc-dto",
+          "detail": "completed",
+          "sourceKey": "session-stop:abc-dto-2f2a875b8ea613d3"
+        },
+        {
+          "id": "session-start:abc-service-bf6a2321fde50169:2026-10-16T06:55:54.192Z",
+          "at": "2026-10-16T06:55:54.192Z",
           "kind": "update",
-          "agent": "worker-dto:aworker",
-          "detail": "started worker-dto:aworker",
-          "sourceKey": "session-start:aworker-dto-72b2a9aacfba6e73"
+          "agent": "bc-service:abc-ser",
+          "detail": "started bc-service:abc-ser",
+          "sourceKey": "session-start:abc-service-bf6a2321fde50169"
         },
         {
-          "id": "session-stop:aworker-dto-72b2a9aacfba6e73:2026-10-15T06:52:11.451Z",
-          "at": "2026-10-15T06:52:11.451Z",
-          "kind": "completion",
-          "agent": "worker-dto:aworker",
-          "detail": "completed",
-          "sourceKey": "session-stop:aworker-dto-72b2a9aacfba6e73"
-        },
-        {
-          "id": "session-start:aworker-service-f50d6e0ca3fa31bc:2026-10-15T06:52:16.555Z",
-          "at": "2026-10-15T06:52:16.555Z",
-          "kind": "update",
-          "agent": "worker-service:aworker",
-          "detail": "started worker-service:aworker",
-          "sourceKey": "session-start:aworker-service-f50d6e0ca3fa31bc"
-        },
-        {
-          "id": "session-stop:aworker-service-f50d6e0ca3fa31bc:2026-10-15T06:52:38.097Z",
-          "at": "2026-10-15T06:52:38.097Z",
-          "kind": "completion",
-          "agent": "worker-service:aworker",
-          "detail": "completed",
-          "sourceKey": "session-stop:aworker-service-f50d6e0ca3fa31bc"
-        },
-        {
-          "id": "session-stop:ae0fc07366ae23535:2026-10-15T06:56:48.806Z",
-          "at": "2026-10-15T06:56:48.806Z",
+          "id": "session-stop:af50ddeef747f8884:2026-10-16T06:56:05.881Z",
+          "at": "2026-10-16T06:56:05.881Z",
           "kind": "completion",
           "agent": "worker-user:aworker",
           "detail": "completed",
-          "sourceKey": "session-stop:ae0fc07366ae23535"
+          "sourceKey": "session-stop:af50ddeef747f8884"
         },
         {
-          "id": "session-stop:a7caef3063323d50a:2026-10-15T07:33:36.032Z",
-          "at": "2026-10-15T07:33:36.032Z",
+          "id": "session-stop:abc-service-bf6a2321fde50169:2026-10-16T06:56:25.197Z",
+          "at": "2026-10-16T06:56:25.197Z",
+          "kind": "completion",
+          "agent": "bc-service:abc-ser",
+          "detail": "completed",
+          "sourceKey": "session-stop:abc-service-bf6a2321fde50169"
+        },
+        {
+          "id": "session-stop:a2644a7645e9cfc46:2026-10-16T06:58:55.582Z",
+          "at": "2026-10-16T06:58:55.582Z",
           "kind": "completion",
           "agent": "worker-user:aworker",
           "detail": "completed",
-          "sourceKey": "session-stop:a7caef3063323d50a"
+          "sourceKey": "session-stop:a2644a7645e9cfc46"
         },
         {
-          "id": "session-stop:aea8705c344a7722b:2026-10-15T07:50:41.134Z",
-          "at": "2026-10-15T07:50:41.134Z",
+          "id": "session-stop:acb38fd65239056a9:2026-10-16T06:59:10.091Z",
+          "at": "2026-10-16T06:59:10.091Z",
           "kind": "completion",
           "agent": "worker-user:aworker",
           "detail": "completed",
-          "sourceKey": "session-stop:aea8705c344a7722b"
+          "sourceKey": "session-stop:acb38fd65239056a9"
+        },
+        {
+          "id": "session-stop:a398b974cb3859670:2026-10-16T07:04:37.453Z",
+          "at": "2026-10-16T07:04:37.453Z",
+          "kind": "completion",
+          "agent": "worker-user:aworker",
+          "detail": "completed",
+          "sourceKey": "session-stop:a398b974cb3859670"
+        },
+        {
+          "id": "session-stop:a386cfa38d1f83d55:2026-10-16T07:35:23.862Z",
+          "at": "2026-10-16T07:35:23.862Z",
+          "kind": "completion",
+          "agent": "worker-user:aworker",
+          "detail": "completed",
+          "sourceKey": "session-stop:a386cfa38d1f83d55"
         }
       ]
     }

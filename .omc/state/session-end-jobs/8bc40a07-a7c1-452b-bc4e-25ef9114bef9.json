@@ -1,0 +1,387 @@
+{
+  "version": 1,
+  "jobId": "a51a1533-1bfd-4959-b461-cced568870db",
+  "sessionId": "8bc40a07-a7c1-452b-bc4e-25ef9114bef9",
+  "scopeKey": "4d2e28a881556d060243c00ba5052ccddde54d3d716d17e5a130e627f509f773",
+  "revision": 91,
+  "createdAt": "2026-10-15T23:56:34.303Z",
+  "updatedAt": "2026-10-15T23:57:09.935Z",
+  "producerGraceExpiresAt": "2026-10-15T23:57:04.304Z",
+  "bestEffortDeadlineAt": "2026-10-15T23:57:57.304Z",
+  "producers": {
+    "core": {
+      "state": "sealed",
+      "intentKey": "29153bf136dacb87b8a865548fa8a97fee8d3261e071c22b91e126bf2d988e19",
+      "payloadDigest": "29153bf136dacb87b8a865548fa8a97fee8d3261e071c22b91e126bf2d988e19",
+      "sealedAt": "2026-10-15T23:57:04.639Z",
+      "sealedBy": "recovery"
+    },
+    "wiki": {
+      "state": "no-op",
+      "sealedAt": "2026-10-15T23:56:34.319Z",
+      "sealedBy": "wiki-producer"
+    }
+  },
+  "actions": {
+    "foreground-cleanup": {
+      "class": "required",
+      "phase": "deferred-required",
+      "status": "completed",
+      "attempts": 1,
+      "idempotencyKey": "4828d6d0f7ea4ac22751f9c9492f29d824cb459eb31645c50c0fee1874aaf393",
+      "payload": {
+        "transcriptPath": "/Users/ian/.claude/projects/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9.jsonl",
+        "cwd": "/Users/ian/private/bookhub",
+        "reason": "prompt_input_exit",
+        "input": {
+          "session_id": "8bc40a07-a7c1-452b-bc4e-25ef9114bef9",
+          "transcript_path": "/Users/ian/.claude/projects/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9.jsonl",
+          "cwd": "/Users/ian/private/bookhub",
+          "scratchpad_dir": "/private/tmp/claude-501/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9/scratchpad",
+          "prompt_id": "72308b44-eed7-4256-ad94-9f76bd3b1909",
+          "hook_event_name": "SessionEnd",
+          "reason": "prompt_input_exit"
+        },
+        "initialTeamNames": [
+          "entity-alignment"
+        ],
+        "openClawRouting": {},
+        "metrics": {
+          "session_id": "8bc40a07-a7c1-452b-bc4e-25ef9114bef9",
+          "ended_at": "2026-10-15T23:57:04.487Z",
+          "reason": "prompt_input_exit",
+          "agents_spawned": 0,
+          "agents_completed": 0,
+          "modes_used": []
+        }
+      },
+      "budgetMs": 9000,
+      "claimedAt": "2026-10-15T23:57:04.363Z",
+      "runner": {
+        "attempt": 1,
+        "runnerNonce": "cb86d57d-79b2-45a1-b631-2670b9221383",
+        "phase": "terminal",
+        "deadlineAt": "2026-10-15T23:57:14.305Z"
+      },
+      "lastOutcomeCode": "completed",
+      "completedAt": "2026-10-15T23:57:04.630Z"
+    },
+    "wiki-capture": {
+      "class": "required",
+      "phase": "deferred-required",
+      "status": "completed",
+      "attempts": 0,
+      "idempotencyKey": "ec157a19a938abcfa003f38d762b10948a8e7d61f1b931973a97a635afd5537c",
+      "payload": {
+        "transcriptPath": "/Users/ian/.claude/projects/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9.jsonl",
+        "cwd": "/Users/ian/private/bookhub",
+        "reason": "prompt_input_exit",
+        "input": {
+          "session_id": "8bc40a07-a7c1-452b-bc4e-25ef9114bef9",
+          "transcript_path": "/Users/ian/.claude/projects/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9.jsonl",
+          "cwd": "/Users/ian/private/bookhub",
+          "scratchpad_dir": "/private/tmp/claude-501/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9/scratchpad",
+          "prompt_id": "72308b44-eed7-4256-ad94-9f76bd3b1909",
+          "hook_event_name": "SessionEnd",
+          "reason": "prompt_input_exit"
+        },
+        "initialTeamNames": [],
+        "openClawRouting": {}
+      },
+      "budgetMs": 9000,
+      "completedAt": "2026-10-15T23:56:34.319Z"
+    },
+    "team-cleanup": {
+      "class": "required",
+      "phase": "deferred-required",
+      "status": "expired",
+      "attempts": 3,
+      "idempotencyKey": "7af85601235db3fa4d35f32e4722142a9b979999a008f707f6111e0cb24c131e",
+      "payload": {
+        "transcriptPath": "/Users/ian/.claude/projects/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9.jsonl",
+        "cwd": "/Users/ian/private/bookhub",
+        "reason": "prompt_input_exit",
+        "input": {
+          "session_id": "8bc40a07-a7c1-452b-bc4e-25ef9114bef9",
+          "transcript_path": "/Users/ian/.claude/projects/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9.jsonl",
+          "cwd": "/Users/ian/private/bookhub",
+          "scratchpad_dir": "/private/tmp/claude-501/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9/scratchpad",
+          "prompt_id": "72308b44-eed7-4256-ad94-9f76bd3b1909",
+          "hook_event_name": "SessionEnd",
+          "reason": "prompt_input_exit"
+        },
+        "initialTeamNames": [
+          "entity-alignment"
+        ],
+        "openClawRouting": {},
+        "metrics": {
+          "session_id": "8bc40a07-a7c1-452b-bc4e-25ef9114bef9",
+          "ended_at": "2026-10-15T23:57:04.487Z",
+          "reason": "prompt_input_exit",
+          "agents_spawned": 0,
+          "agents_completed": 0,
+          "modes_used": []
+        }
+      },
+      "budgetMs": 9000,
+      "claimedAt": "2026-10-15T23:57:07.568Z",
+      "runner": {
+        "attempt": 3,
+        "runnerNonce": "934ee953-ffd0-41df-bde6-f342636a91c2",
+        "phase": "terminal",
+        "deadlineAt": "2026-10-15T23:57:17.502Z"
+      },
+      "lastOutcomeCode": "required-attempt-limit"
+    },
+    "python-cleanup": {
+      "class": "required",
+      "phase": "deferred-required",
+      "status": "completed",
+      "attempts": 1,
+      "idempotencyKey": "138f923e8f79429929a094a060b0572eb7587dbe071d695f2dbfc5b3becb6a6f",
+      "payload": {
+        "transcriptPath": "/Users/ian/.claude/projects/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9.jsonl",
+        "cwd": "/Users/ian/private/bookhub",
+        "reason": "prompt_input_exit",
+        "input": {
+          "session_id": "8bc40a07-a7c1-452b-bc4e-25ef9114bef9",
+          "transcript_path": "/Users/ian/.claude/projects/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9.jsonl",
+          "cwd": "/Users/ian/private/bookhub",
+          "scratchpad_dir": "/private/tmp/claude-501/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9/scratchpad",
+          "prompt_id": "72308b44-eed7-4256-ad94-9f76bd3b1909",
+          "hook_event_name": "SessionEnd",
+          "reason": "prompt_input_exit"
+        },
+        "initialTeamNames": [
+          "entity-alignment"
+        ],
+        "openClawRouting": {},
+        "metrics": {
+          "session_id": "8bc40a07-a7c1-452b-bc4e-25ef9114bef9",
+          "ended_at": "2026-10-15T23:57:04.487Z",
+          "reason": "prompt_input_exit",
+          "agents_spawned": 0,
+          "agents_completed": 0,
+          "modes_used": []
+        }
+      },
+      "budgetMs": 9000,
+      "claimedAt": "2026-10-15T23:57:04.833Z",
+      "runner": {
+        "attempt": 1,
+        "runnerNonce": "e1754a48-ecc1-4973-9307-b3918caa65e0",
+        "phase": "terminal",
+        "deadlineAt": "2026-10-15T23:57:14.305Z"
+      },
+      "lastOutcomeCode": "completed",
+      "completedAt": "2026-10-15T23:57:04.992Z"
+    },
+    "reply-cleanup": {
+      "class": "required",
+      "phase": "deferred-required",
+      "status": "completed",
+      "attempts": 1,
+      "idempotencyKey": "b350b71b6457c54ea6fba786de430fd6f1df3aa823e25b6556d5ccc0c7428379",
+      "payload": {
+        "transcriptPath": "/Users/ian/.claude/projects/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9.jsonl",
+        "cwd": "/Users/ian/private/bookhub",
+        "reason": "prompt_input_exit",
+        "input": {
+          "session_id": "8bc40a07-a7c1-452b-bc4e-25ef9114bef9",
+          "transcript_path": "/Users/ian/.claude/projects/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9.jsonl",
+          "cwd": "/Users/ian/private/bookhub",
+          "scratchpad_dir": "/private/tmp/claude-501/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9/scratchpad",
+          "prompt_id": "72308b44-eed7-4256-ad94-9f76bd3b1909",
+          "hook_event_name": "SessionEnd",
+          "reason": "prompt_input_exit"
+        },
+        "initialTeamNames": [],
+        "openClawRouting": {}
+      },
+      "budgetMs": 9000,
+      "claimedAt": "2026-10-15T23:57:05.010Z",
+      "runner": {
+        "attempt": 1,
+        "runnerNonce": "c51457f4-d81f-492d-a935-45d17e8b6eac",
+        "phase": "terminal",
+        "deadlineAt": "2026-10-15T23:57:14.305Z"
+      },
+      "lastOutcomeCode": "completed",
+      "completedAt": "2026-10-15T23:57:05.131Z"
+    },
+    "callback": {
+      "class": "best-effort",
+      "phase": "deferred-best-effort",
+      "status": "completed",
+      "attempts": 1,
+      "idempotencyKey": "d03dbe74b874f9bcb61511aef27bcb81e8d24c7f0417006c772b3c53616eacad",
+      "payload": {
+        "transcriptPath": "/Users/ian/.claude/projects/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9.jsonl",
+        "cwd": "/Users/ian/private/bookhub",
+        "reason": "prompt_input_exit",
+        "input": {
+          "session_id": "8bc40a07-a7c1-452b-bc4e-25ef9114bef9",
+          "transcript_path": "/Users/ian/.claude/projects/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9.jsonl",
+          "cwd": "/Users/ian/private/bookhub",
+          "scratchpad_dir": "/private/tmp/claude-501/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9/scratchpad",
+          "prompt_id": "72308b44-eed7-4256-ad94-9f76bd3b1909",
+          "hook_event_name": "SessionEnd",
+          "reason": "prompt_input_exit"
+        },
+        "initialTeamNames": [
+          "entity-alignment"
+        ],
+        "openClawRouting": {},
+        "metrics": {
+          "session_id": "8bc40a07-a7c1-452b-bc4e-25ef9114bef9",
+          "ended_at": "2026-10-15T23:57:04.487Z",
+          "reason": "prompt_input_exit",
+          "agents_spawned": 0,
+          "agents_completed": 0,
+          "modes_used": []
+        }
+      },
+      "budgetMs": 2000,
+      "claimedAt": "2026-10-15T23:57:05.148Z",
+      "runner": {
+        "attempt": 1,
+        "runnerNonce": "caa0f608-91cc-453a-82ad-e78191ce12fb",
+        "phase": "terminal",
+        "deadlineAt": "2026-10-15T23:57:14.305Z"
+      },
+      "lastOutcomeCode": "completed",
+      "completedAt": "2026-10-15T23:57:05.265Z"
+    },
+    "notification": {
+      "class": "best-effort",
+      "phase": "deferred-best-effort",
+      "status": "completed",
+      "attempts": 1,
+      "idempotencyKey": "57e48ffb67e1afe06b46585e79f668abe182acb07e8b7e0f41f7cac74263b06e",
+      "payload": {
+        "transcriptPath": "/Users/ian/.claude/projects/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9.jsonl",
+        "cwd": "/Users/ian/private/bookhub",
+        "reason": "prompt_input_exit",
+        "input": {
+          "session_id": "8bc40a07-a7c1-452b-bc4e-25ef9114bef9",
+          "transcript_path": "/Users/ian/.claude/projects/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9.jsonl",
+          "cwd": "/Users/ian/private/bookhub",
+          "scratchpad_dir": "/private/tmp/claude-501/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9/scratchpad",
+          "prompt_id": "72308b44-eed7-4256-ad94-9f76bd3b1909",
+          "hook_event_name": "SessionEnd",
+          "reason": "prompt_input_exit"
+        },
+        "initialTeamNames": [
+          "entity-alignment"
+        ],
+        "openClawRouting": {},
+        "metrics": {
+          "session_id": "8bc40a07-a7c1-452b-bc4e-25ef9114bef9",
+          "ended_at": "2026-10-15T23:57:04.487Z",
+          "reason": "prompt_input_exit",
+          "agents_spawned": 0,
+          "agents_completed": 0,
+          "modes_used": []
+        }
+      },
+      "budgetMs": 2000,
+      "claimedAt": "2026-10-15T23:57:05.284Z",
+      "runner": {
+        "attempt": 1,
+        "runnerNonce": "a383d116-68e3-4d6e-b6ec-78149b2a07e5",
+        "phase": "terminal",
+        "deadlineAt": "2026-10-15T23:57:14.305Z"
+      },
+      "lastOutcomeCode": "completed",
+      "completedAt": "2026-10-15T23:57:05.397Z"
+    },
+    "openclaw": {
+      "class": "best-effort",
+      "phase": "deferred-best-effort",
+      "status": "completed",
+      "attempts": 1,
+      "idempotencyKey": "7c9e2e1423f62da91e23f430886c6471ccdbc4b9016a4a1c4a40303a4ae8066b",
+      "payload": {
+        "transcriptPath": "/Users/ian/.claude/projects/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9.jsonl",
+        "cwd": "/Users/ian/private/bookhub",
+        "reason": "prompt_input_exit",
+        "input": {
+          "session_id": "8bc40a07-a7c1-452b-bc4e-25ef9114bef9",
+          "transcript_path": "/Users/ian/.claude/projects/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9.jsonl",
+          "cwd": "/Users/ian/private/bookhub",
+          "scratchpad_dir": "/private/tmp/claude-501/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9/scratchpad",
+          "prompt_id": "72308b44-eed7-4256-ad94-9f76bd3b1909",
+          "hook_event_name": "SessionEnd",
+          "reason": "prompt_input_exit"
+        },
+        "initialTeamNames": [
+          "entity-alignment"
+        ],
+        "openClawRouting": {},
+        "metrics": {
+          "session_id": "8bc40a07-a7c1-452b-bc4e-25ef9114bef9",
+          "ended_at": "2026-10-15T23:57:04.487Z",
+          "reason": "prompt_input_exit",
+          "agents_spawned": 0,
+          "agents_completed": 0,
+          "modes_used": []
+        }
+      },
+      "budgetMs": 2000,
+      "claimedAt": "2026-10-15T23:57:05.414Z",
+      "runner": {
+        "attempt": 1,
+        "runnerNonce": "4c34b90b-3b6d-40bd-b448-9fd8c4301b47",
+        "phase": "terminal",
+        "deadlineAt": "2026-10-15T23:57:14.305Z"
+      },
+      "lastOutcomeCode": "completed",
+      "completedAt": "2026-10-15T23:57:05.532Z"
+    },
+    "spawn-next": {
+      "class": "best-effort",
+      "phase": "deferred-best-effort",
+      "status": "completed",
+      "attempts": 1,
+      "idempotencyKey": "73641837c01d91473479d1211d691126fab219973f7e2b6a5d163ecad55d2631",
+      "payload": {
+        "transcriptPath": "/Users/ian/.claude/projects/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9.jsonl",
+        "cwd": "/Users/ian/private/bookhub",
+        "reason": "prompt_input_exit",
+        "input": {
+          "session_id": "8bc40a07-a7c1-452b-bc4e-25ef9114bef9",
+          "transcript_path": "/Users/ian/.claude/projects/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9.jsonl",
+          "cwd": "/Users/ian/private/bookhub",
+          "scratchpad_dir": "/private/tmp/claude-501/-Users-ian-private-bookhub/8bc40a07-a7c1-452b-bc4e-25ef9114bef9/scratchpad",
+          "prompt_id": "72308b44-eed7-4256-ad94-9f76bd3b1909",
+          "hook_event_name": "SessionEnd",
+          "reason": "prompt_input_exit"
+        },
+        "initialTeamNames": [],
+        "openClawRouting": {}
+      },
+      "budgetMs": 2000,
+      "claimedAt": "2026-10-15T23:57:05.550Z",
+      "runner": {
+        "attempt": 1,
+        "runnerNonce": "cc7f2030-c748-4a33-a942-3b645867d59f",
+        "phase": "terminal",
+        "deadlineAt": "2026-10-15T23:57:14.305Z"
+      },
+      "lastOutcomeCode": "completed",
+      "completedAt": "2026-10-15T23:57:05.667Z"
+    }
+  },
+  "owner": null,
+  "phase": "complete",
+  "recoverableFailure": {
+    "reason": "actions-settled",
+    "releasedAt": "2026-10-15T23:57:09.914Z",
+    "ownerNonce": "5f4977f4-46cf-4873-9775-d920139f5bb8"
+  },
+  "completion": {
+    "completedAt": "2026-10-15T23:57:09.914Z",
+    "terminalDigest": "9089e08bec56de4b3c4bb90a06ba64551361a74412973fc43eb84d2018c9f041",
+    "terminalRevision": 90
+  }
+}
