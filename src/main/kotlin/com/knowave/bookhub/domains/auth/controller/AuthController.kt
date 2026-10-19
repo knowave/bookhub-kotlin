@@ -1,5 +1,7 @@
 package com.knowave.bookhub.domains.auth.controller
 
+import com.knowave.bookhub.domains.auth.controller.dto.LoginRequest
+import com.knowave.bookhub.domains.auth.controller.dto.LoginResponse
 import com.knowave.bookhub.domains.auth.controller.dto.SignUpLibrarianRequest
 import com.knowave.bookhub.domains.auth.controller.dto.SignUpMemberRequest
 import com.knowave.bookhub.domains.auth.controller.dto.SignUpResponse
@@ -27,4 +29,8 @@ class AuthController(
     @ResponseStatus(HttpStatus.CREATED)
     fun signUpLibrarian(@RequestBody() @Valid() request: SignUpLibrarianRequest): SignUpResponse =
         SignUpResponse.from(authService.signUpLibrarian(request.toCommand()))
+
+    @PostMapping("/login")
+    fun login(@RequestBody() @Valid() request: LoginRequest): LoginResponse =
+        LoginResponse.from(authService.login(request.toCommand()))
 }

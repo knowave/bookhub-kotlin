@@ -1,9 +1,8 @@
 package com.knowave.bookhub.domains.user.exception
 
 import com.knowave.bookhub.common.exception.BusinessException
-
 import org.springframework.http.HttpStatus
-import java.util.UUID
+import java.util.*
 
 class UserNotFoundException(userId: UUID) : BusinessException(
     code = "USER_NOT_FOUND",
@@ -23,4 +22,10 @@ class UserNotPendingException(userId: UUID) : BusinessException(
     status = HttpStatus.CONFLICT,
     rule = "M-2",
     message = "승인 대기 상태가 아닙니다: $userId",
+)
+
+class UserNotActiveException(userId: UUID) : BusinessException(
+    code = "USER_NOT_ACTIVE",
+    status = HttpStatus.FORBIDDEN,
+    message = "승인 완료된 사용자가 아닙니다 $userId"
 )
