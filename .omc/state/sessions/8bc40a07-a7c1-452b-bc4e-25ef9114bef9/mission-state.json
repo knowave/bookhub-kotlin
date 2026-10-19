@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T07:35:23.862Z",
+  "updatedAt": "2026-10-19T05:31:19.024Z",
   "missions": [
     {
       "id": "session:8bc40a07-a7c1-452b-bc4e-25ef9114bef9:none",
@@ -7,15 +7,15 @@
       "name": "none",
       "objective": "Session mission",
       "createdAt": "2026-09-21T01:13:55.887Z",
-      "updatedAt": "2026-10-16T07:35:23.862Z",
+      "updatedAt": "2026-10-19T05:31:19.024Z",
       "status": "done",
-      "workerCount": 12,
+      "workerCount": 15,
       "taskCounts": {
-        "total": 12,
+        "total": 15,
         "pending": 0,
         "blocked": 0,
         "inProgress": 0,
-        "completed": 12,
+        "completed": 15,
         "failed": 0
       },
       "agents": [
@@ -27,7 +27,7 @@
           "currentStep": null,
           "latestUpdate": "completed",
           "completedSummary": null,
-          "updatedAt": "2026-10-16T07:35:23.862Z"
+          "updatedAt": "2026-10-19T05:31:19.024Z"
         },
         {
           "name": "worker-category:aworker",
@@ -138,80 +138,86 @@
           "latestUpdate": "completed",
           "completedSummary": null,
           "updatedAt": "2026-10-16T06:56:25.197Z"
+        },
+        {
+          "name": "jwt-leaf:ajwt-le",
+          "role": "jwt-leaf",
+          "ownership": "ajwt-leaf-c5c087249b1920f6",
+          "status": "done",
+          "currentStep": null,
+          "latestUpdate": "completed",
+          "completedSummary": null,
+          "updatedAt": "2026-10-19T04:54:02.906Z"
+        },
+        {
+          "name": "jwt-impl:ajwt-im",
+          "role": "jwt-impl",
+          "ownership": "ajwt-impl-32ec275766bbdc22",
+          "status": "done",
+          "currentStep": null,
+          "latestUpdate": "completed",
+          "completedSummary": null,
+          "updatedAt": "2026-10-19T04:54:31.339Z"
+        },
+        {
+          "name": "jwt-test:ajwt-te",
+          "role": "jwt-test",
+          "ownership": "ajwt-test-324fd6cb0d9c9779",
+          "status": "done",
+          "currentStep": null,
+          "latestUpdate": "completed",
+          "completedSummary": null,
+          "updatedAt": "2026-10-19T04:54:55.178Z"
         }
       ],
       "timeline": [
         {
-          "id": "session-stop:abc-leaf-c1520d431ce2722c:2026-10-16T06:55:21.477Z",
-          "at": "2026-10-16T06:55:21.477Z",
-          "kind": "completion",
-          "agent": "bc-leaf:abc-lea",
-          "detail": "completed",
-          "sourceKey": "session-stop:abc-leaf-c1520d431ce2722c"
-        },
-        {
-          "id": "session-stop:abc-dto-2f2a875b8ea613d3:2026-10-16T06:55:39.191Z",
-          "at": "2026-10-16T06:55:39.191Z",
-          "kind": "completion",
-          "agent": "bc-dto:abc-dto",
-          "detail": "completed",
-          "sourceKey": "session-stop:abc-dto-2f2a875b8ea613d3"
-        },
-        {
-          "id": "session-start:abc-service-bf6a2321fde50169:2026-10-16T06:55:54.192Z",
-          "at": "2026-10-16T06:55:54.192Z",
+          "id": "session-start:ajwt-impl-32ec275766bbdc22:2026-10-19T04:54:13.889Z",
+          "at": "2026-10-19T04:54:13.889Z",
           "kind": "update",
-          "agent": "bc-service:abc-ser",
-          "detail": "started bc-service:abc-ser",
-          "sourceKey": "session-start:abc-service-bf6a2321fde50169"
+          "agent": "jwt-impl:ajwt-im",
+          "detail": "started jwt-impl:ajwt-im",
+          "sourceKey": "session-start:ajwt-impl-32ec275766bbdc22"
         },
         {
-          "id": "session-stop:af50ddeef747f8884:2026-10-16T06:56:05.881Z",
-          "at": "2026-10-16T06:56:05.881Z",
+          "id": "session-stop:ajwt-impl-32ec275766bbdc22:2026-10-19T04:54:31.339Z",
+          "at": "2026-10-19T04:54:31.339Z",
+          "kind": "completion",
+          "agent": "jwt-impl:ajwt-im",
+          "detail": "completed",
+          "sourceKey": "session-stop:ajwt-impl-32ec275766bbdc22"
+        },
+        {
+          "id": "session-start:ajwt-test-324fd6cb0d9c9779:2026-10-19T04:54:36.766Z",
+          "at": "2026-10-19T04:54:36.766Z",
+          "kind": "update",
+          "agent": "jwt-test:ajwt-te",
+          "detail": "started jwt-test:ajwt-te",
+          "sourceKey": "session-start:ajwt-test-324fd6cb0d9c9779"
+        },
+        {
+          "id": "session-stop:ajwt-test-324fd6cb0d9c9779:2026-10-19T04:54:55.178Z",
+          "at": "2026-10-19T04:54:55.178Z",
+          "kind": "completion",
+          "agent": "jwt-test:ajwt-te",
+          "detail": "completed",
+          "sourceKey": "session-stop:ajwt-test-324fd6cb0d9c9779"
+        },
+        {
+          "id": "session-stop:ac5357d0a4c257f32:2026-10-19T04:59:58.818Z",
+          "at": "2026-10-19T04:59:58.818Z",
           "kind": "completion",
           "agent": "worker-user:aworker",
           "detail": "completed",
-          "sourceKey": "session-stop:af50ddeef747f8884"
+          "sourceKey": "session-stop:ac5357d0a4c257f32"
         },
         {
-          "id": "session-stop:abc-service-bf6a2321fde50169:2026-10-16T06:56:25.197Z",
-          "at": "2026-10-16T06:56:25.197Z",
-          "kind": "completion",
-          "agent": "bc-service:abc-ser",
-          "detail": "completed",
-          "sourceKey": "session-stop:abc-service-bf6a2321fde50169"
-        },
-        {
-          "id": "session-stop:a2644a7645e9cfc46:2026-10-16T06:58:55.582Z",
-          "at": "2026-10-16T06:58:55.582Z",
+          "id": "session-stop:a661fe87c7664ae15:2026-10-19T05:31:19.024Z",
+          "at": "2026-10-19T05:31:19.024Z",
           "kind": "completion",
           "agent": "worker-user:aworker",
           "detail": "completed",
-          "sourceKey": "session-stop:a2644a7645e9cfc46"
-        },
-        {
-          "id": "session-stop:acb38fd65239056a9:2026-10-16T06:59:10.091Z",
-          "at": "2026-10-16T06:59:10.091Z",
-          "kind": "completion",
-          "agent": "worker-user:aworker",
-          "detail": "completed",
-          "sourceKey": "session-stop:acb38fd65239056a9"
-        },
-        {
-          "id": "session-stop:a398b974cb3859670:2026-10-16T07:04:37.453Z",
-          "at": "2026-10-16T07:04:37.453Z",
-          "kind": "completion",
-          "agent": "worker-user:aworker",
-          "detail": "completed",
-          "sourceKey": "session-stop:a398b974cb3859670"
-        },
-        {
-          "id": "session-stop:a386cfa38d1f83d55:2026-10-16T07:35:23.862Z",
-          "at": "2026-10-16T07:35:23.862Z",
-          "kind": "completion",
-          "agent": "worker-user:aworker",
-          "detail": "completed",
-          "sourceKey": "session-stop:a386cfa38d1f83d55"
+          "sourceKey": "session-stop:a661fe87c7664ae15"
         }
       ]
     }

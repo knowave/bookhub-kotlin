@@ -11,3 +11,8 @@
 - 2026-10-16 BookCopy: `closedLoan: Nothing?`의 Jackson 직렬화를 끝내 검증하지 못했다. 테스트 금지 + 앱 미기동이라 컴파일까지가 한계. 응답 전용이라 역직렬화 위험은 없고 JVM 시그니처가 Void로 내려가지만, 실제 `"closedLoan": null` 출력은 미확인. 문제 시 `Any?` 한 줄 교체.
 - 2026-10-16 BookCopy: callNumber 유일성 범위가 세션을 걸쳐 세 번 뒤집혔다(지점내 → 전역 → 지점내). 매번 인터뷰 Round 0에서 확정했는데 스펙 승인 단계에서 번복됐다. **스키마에 닿는 결정은 Round 0이 아니라 승인 직전에 재확인할 것.**
 - 2026-10-16 검증 어노테이션: 요청받은 `@field:NotBlank`를 UUID 필드에 붙이면 `UnexpectedTypeException: HV000030`으로 첫 요청에서 500이 난다 — 컴파일·단위테스트로는 안 잡힌다. `@field:NotNull`도 non-null 코틀린 타입에서는 Jackson 역직렬화가 먼저 실패해 발동하지 않는다. 근본 원인은 `GlobalExceptionHandler`가 `HttpMessageNotReadableException`/`MethodArgumentTypeMismatchException`을 처리하지 않아 ErrorResponse 계약이 깨지던 것이었고, 핸들러 하나로 저장소 전체를 해소했다. **DTO 어노테이션 요청이 오면 타입 지원 여부를 먼저 확인할 것.**
+- 2026-10-19 JWT: 지시가 "application.yaml에 jwt 설정을 추가하고 JWT_SECRET은 .env에 이미 있다"였으나 실제로는 `spring.jwt.*`에 이미 있었고 .env 키는 `JWT_SECURITY`였다. 그대로 썼으면 플레이스홀더 미해결로 부팅 실패. **"이미 있다"는 진술은 키 이름까지 직접 확인할 것.**
+- 2026-10-19 JWT: AC 검사에서 사전 사용자 변경(jjwt 의존성·UserPrincipal 필드·SecurityConfig import 정리)을 워커 변경으로 오판해 FAIL 2건을 냈다. `git status`만으로는 누가 바꿨는지 알 수 없다. **"무변경" 검사는 git status가 아니라 `git diff`로 내용을 봐야 한다.**
+- 2026-10-19 JWT: 테스트 금지 관행의 예외를 처음 적용했다. 근거는 "컴파일러가 검사하는 범위"였다 — 컨트롤러·DTO는 타입이 잡아주지만 JWT는 서명·클레임 키·만료가 전부 문자열과 산술이다. 실제로 테스트 7건이 jjwt 0.12 API, claim(null) 생략 동작, 음수 유효기간 처리를 한 번에 확인해줬다.
+- 2026-10-19 JWT validate 제거: 지시가 "parseAccess or parseRefresh"였는데 직전 세션 기준 메서드명은 `parse`였다. 확인해보니 사용자가 그 사이 직접 `parseAccess`로 개명해 둔 상태였다. **이름 불일치를 발견하면 "지시가 틀렸다"고 단정하기 전에 현재 파일을 먼저 읽을 것.**
+- 2026-10-19 JWT validate 제거: validate를 지우며 그 두 테스트 케이스를 삭제하지 않고 parseAccess 기준으로 옮겼다. 위조 서명·만료 거부는 진입점만 바뀌었을 뿐 지켜야 할 동작이라, 지웠으면 verify에서 확인한 alg:none 방어 커버리지가 조용히 사라졌을 것이다.

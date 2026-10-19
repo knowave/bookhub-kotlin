@@ -11,3 +11,15 @@
 {"t":0,"agent":"system","event":"keyword_detected","keyword":"autopilot"}
 {"t":0,"agent":"system","event":"mode_change","mode_from":"none","mode_to":"autopilot"}
 {"t":0,"agent":"a386cfa","agent_type":"untracked-native-fork","event":"agent_stop","success":true,"synthetic":true,"telemetry_status":"unmatched_stop","reason":"SubagentStop arrived without a matching SubagentStart; native Agent/Task start telemetry was not observed."}
+{"t":0,"agent":"a9f5811","agent_type":"untracked-native-fork","event":"agent_stop","success":true,"synthetic":true,"telemetry_status":"unmatched_stop","reason":"SubagentStop arrived without a matching SubagentStart; native Agent/Task start telemetry was not observed."}
+{"t":0,"agent":"a0c8a8a","agent_type":"untracked-native-fork","event":"agent_stop","success":true,"synthetic":true,"telemetry_status":"unmatched_stop","reason":"SubagentStop arrived without a matching SubagentStart; native Agent/Task start telemetry was not observed."}
+{"t":0,"agent":"ajwt-le","agent_type":"jwt-leaf","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"ajwt-le","agent_type":"jwt-leaf","event":"agent_stop","success":true,"duration_ms":20346}
+{"t":0,"agent":"ajwt-im","agent_type":"jwt-impl","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"ajwt-im","agent_type":"jwt-impl","event":"agent_stop","success":true,"duration_ms":17450}
+{"t":0,"agent":"ajwt-te","agent_type":"jwt-test","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"ajwt-te","agent_type":"jwt-test","event":"agent_stop","success":true,"duration_ms":18412}
+{"t":0,"agent":"ac5357d","agent_type":"untracked-native-fork","event":"agent_stop","success":true,"synthetic":true,"telemetry_status":"unmatched_stop","reason":"SubagentStop arrived without a matching SubagentStart; native Agent/Task start telemetry was not observed."}
+{"t":0,"agent":"a661fe8","agent_type":"untracked-native-fork","event":"agent_stop","success":true,"synthetic":true,"telemetry_status":"unmatched_stop","reason":"SubagentStop arrived without a matching SubagentStart; native Agent/Task start telemetry was not observed."}
+{"t":0,"agent":"system","event":"keyword_detected","keyword":"autopilot"}
+{"t":0,"agent":"system","event":"mode_change","mode_from":"none","mode_to":"autopilot"}
