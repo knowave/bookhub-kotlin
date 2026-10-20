@@ -618,10 +618,57 @@
       "synthetic": true,
       "telemetry_status": "unmatched_stop",
       "telemetry_note": "SubagentStop arrived without a matching SubagentStart; native Agent/Task start telemetry was not observed."
+    },
+    {
+      "agent_id": "asd-cfg-9dea9ea0fb61ed64",
+      "agent_type": "sd-cfg",
+      "started_at": "2026-10-20T02:20:23.317Z",
+      "parent_mode": "none",
+      "status": "completed",
+      "completed_at": "2026-10-20T02:20:49.330Z",
+      "duration_ms": 26013
+    },
+    {
+      "agent_id": "asd-auth-07da2b6b0b8cce87",
+      "agent_type": "sd-auth",
+      "started_at": "2026-10-20T02:20:48.708Z",
+      "parent_mode": "none",
+      "status": "completed",
+      "completed_at": "2026-10-20T02:21:32.272Z",
+      "duration_ms": 43564
+    },
+    {
+      "agent_id": "asd-book-d2653b0470f13416",
+      "agent_type": "sd-book",
+      "started_at": "2026-10-20T02:21:08.172Z",
+      "parent_mode": "none",
+      "status": "completed",
+      "completed_at": "2026-10-20T02:21:47.037Z",
+      "duration_ms": 38865
+    },
+    {
+      "agent_id": "asd-lib-9bee1cc6063ed2c4",
+      "agent_type": "sd-lib",
+      "started_at": "2026-10-20T02:21:31.727Z",
+      "parent_mode": "none",
+      "status": "completed",
+      "completed_at": "2026-10-20T02:21:59.676Z",
+      "duration_ms": 27949
+    },
+    {
+      "agent_id": "a8d31d0406a92e0b9",
+      "agent_type": "untracked-native-fork",
+      "started_at": "2026-10-20T02:29:10.710Z",
+      "parent_mode": "none",
+      "status": "completed",
+      "completed_at": "2026-10-20T02:29:10.710Z",
+      "synthetic": true,
+      "telemetry_status": "unmatched_stop",
+      "telemetry_note": "SubagentStop arrived without a matching SubagentStart; native Agent/Task start telemetry was not observed."
     }
   ],
-  "total_spawned": 15,
-  "total_completed": 64,
+  "total_spawned": 19,
+  "total_completed": 69,
   "total_failed": 0,
-  "last_updated": "2026-10-19T05:49:13.116Z"
+  "last_updated": "2026-10-20T02:29:10.713Z"
 }

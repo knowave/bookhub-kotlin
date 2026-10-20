@@ -1,8 +1,8 @@
 {
   "active": true,
-  "requested_at": "2026-10-19T05:45:51.632Z",
-  "expires_at": "2026-10-19T05:46:21.632Z",
-  "mode": "autopilot",
+  "requested_at": "2026-10-20T02:25:45.182Z",
+  "expires_at": "2026-10-20T02:26:15.182Z",
+  "mode": "deep-interview",
   "source": "state_clear",
-  "target_state_sha256": "5cff1ee5eb1332b7ef6f90ca81ca7c5be51cfb0d744e8d75931a5b405b712d05"
+  "target_state_sha256": "f8bf2cbb98f49adc3eb656f4c7649c6e467bfa34783ab74449ce452db17c98cb"
 }

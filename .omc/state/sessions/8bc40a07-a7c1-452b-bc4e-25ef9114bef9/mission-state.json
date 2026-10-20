@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T05:49:13.112Z",
+  "updatedAt": "2026-10-20T02:29:10.710Z",
   "missions": [
     {
       "id": "session:8bc40a07-a7c1-452b-bc4e-25ef9114bef9:none",
@@ -7,15 +7,15 @@
       "name": "none",
       "objective": "Session mission",
       "createdAt": "2026-09-21T01:13:55.887Z",
-      "updatedAt": "2026-10-19T05:49:13.112Z",
+      "updatedAt": "2026-10-20T02:29:10.710Z",
       "status": "done",
-      "workerCount": 15,
+      "workerCount": 19,
       "taskCounts": {
-        "total": 15,
+        "total": 19,
         "pending": 0,
         "blocked": 0,
         "inProgress": 0,
-        "completed": 15,
+        "completed": 19,
         "failed": 0
       },
       "agents": [
@@ -27,7 +27,7 @@
           "currentStep": null,
           "latestUpdate": "completed",
           "completedSummary": null,
-          "updatedAt": "2026-10-19T05:49:13.112Z"
+          "updatedAt": "2026-10-20T02:29:10.710Z"
         },
         {
           "name": "worker-category:aworker",
@@ -168,64 +168,104 @@
           "latestUpdate": "completed",
           "completedSummary": null,
           "updatedAt": "2026-10-19T04:54:55.178Z"
+        },
+        {
+          "name": "sd-cfg:asd-cfg",
+          "role": "sd-cfg",
+          "ownership": "asd-cfg-9dea9ea0fb61ed64",
+          "status": "done",
+          "currentStep": null,
+          "latestUpdate": "completed",
+          "completedSummary": null,
+          "updatedAt": "2026-10-20T02:20:49.330Z"
+        },
+        {
+          "name": "sd-auth:asd-aut",
+          "role": "sd-auth",
+          "ownership": "asd-auth-07da2b6b0b8cce87",
+          "status": "done",
+          "currentStep": null,
+          "latestUpdate": "completed",
+          "completedSummary": null,
+          "updatedAt": "2026-10-20T02:21:32.272Z"
+        },
+        {
+          "name": "sd-book:asd-boo",
+          "role": "sd-book",
+          "ownership": "asd-book-d2653b0470f13416",
+          "status": "done",
+          "currentStep": null,
+          "latestUpdate": "completed",
+          "completedSummary": null,
+          "updatedAt": "2026-10-20T02:21:47.037Z"
+        },
+        {
+          "name": "sd-lib:asd-lib",
+          "role": "sd-lib",
+          "ownership": "asd-lib-9bee1cc6063ed2c4",
+          "status": "done",
+          "currentStep": null,
+          "latestUpdate": "completed",
+          "completedSummary": null,
+          "updatedAt": "2026-10-20T02:21:59.676Z"
         }
       ],
       "timeline": [
         {
-          "id": "session-start:ajwt-impl-32ec275766bbdc22:2026-10-19T04:54:13.889Z",
-          "at": "2026-10-19T04:54:13.889Z",
+          "id": "session-stop:asd-cfg-9dea9ea0fb61ed64:2026-10-20T02:20:49.330Z",
+          "at": "2026-10-20T02:20:49.330Z",
+          "kind": "completion",
+          "agent": "sd-cfg:asd-cfg",
+          "detail": "completed",
+          "sourceKey": "session-stop:asd-cfg-9dea9ea0fb61ed64"
+        },
+        {
+          "id": "session-start:asd-book-d2653b0470f13416:2026-10-20T02:21:08.172Z",
+          "at": "2026-10-20T02:21:08.172Z",
           "kind": "update",
-          "agent": "jwt-impl:ajwt-im",
-          "detail": "started jwt-impl:ajwt-im",
-          "sourceKey": "session-start:ajwt-impl-32ec275766bbdc22"
+          "agent": "sd-book:asd-boo",
+          "detail": "started sd-book:asd-boo",
+          "sourceKey": "session-start:asd-book-d2653b0470f13416"
         },
         {
-          "id": "session-stop:ajwt-impl-32ec275766bbdc22:2026-10-19T04:54:31.339Z",
-          "at": "2026-10-19T04:54:31.339Z",
-          "kind": "completion",
-          "agent": "jwt-impl:ajwt-im",
-          "detail": "completed",
-          "sourceKey": "session-stop:ajwt-impl-32ec275766bbdc22"
-        },
-        {
-          "id": "session-start:ajwt-test-324fd6cb0d9c9779:2026-10-19T04:54:36.766Z",
-          "at": "2026-10-19T04:54:36.766Z",
+          "id": "session-start:asd-lib-9bee1cc6063ed2c4:2026-10-20T02:21:31.727Z",
+          "at": "2026-10-20T02:21:31.727Z",
           "kind": "update",
-          "agent": "jwt-test:ajwt-te",
-          "detail": "started jwt-test:ajwt-te",
-          "sourceKey": "session-start:ajwt-test-324fd6cb0d9c9779"
+          "agent": "sd-lib:asd-lib",
+          "detail": "started sd-lib:asd-lib",
+          "sourceKey": "session-start:asd-lib-9bee1cc6063ed2c4"
         },
         {
-          "id": "session-stop:ajwt-test-324fd6cb0d9c9779:2026-10-19T04:54:55.178Z",
-          "at": "2026-10-19T04:54:55.178Z",
+          "id": "session-stop:asd-auth-07da2b6b0b8cce87:2026-10-20T02:21:32.272Z",
+          "at": "2026-10-20T02:21:32.272Z",
           "kind": "completion",
-          "agent": "jwt-test:ajwt-te",
+          "agent": "sd-auth:asd-aut",
           "detail": "completed",
-          "sourceKey": "session-stop:ajwt-test-324fd6cb0d9c9779"
+          "sourceKey": "session-stop:asd-auth-07da2b6b0b8cce87"
         },
         {
-          "id": "session-stop:ac5357d0a4c257f32:2026-10-19T04:59:58.818Z",
-          "at": "2026-10-19T04:59:58.818Z",
+          "id": "session-stop:asd-book-d2653b0470f13416:2026-10-20T02:21:47.037Z",
+          "at": "2026-10-20T02:21:47.037Z",
+          "kind": "completion",
+          "agent": "sd-book:asd-boo",
+          "detail": "completed",
+          "sourceKey": "session-stop:asd-book-d2653b0470f13416"
+        },
+        {
+          "id": "session-stop:asd-lib-9bee1cc6063ed2c4:2026-10-20T02:21:59.676Z",
+          "at": "2026-10-20T02:21:59.676Z",
+          "kind": "completion",
+          "agent": "sd-lib:asd-lib",
+          "detail": "completed",
+          "sourceKey": "session-stop:asd-lib-9bee1cc6063ed2c4"
+        },
+        {
+          "id": "session-stop:a8d31d0406a92e0b9:2026-10-20T02:29:10.710Z",
+          "at": "2026-10-20T02:29:10.710Z",
           "kind": "completion",
           "agent": "worker-user:aworker",
           "detail": "completed",
-          "sourceKey": "session-stop:ac5357d0a4c257f32"
-        },
-        {
-          "id": "session-stop:a661fe87c7664ae15:2026-10-19T05:31:19.024Z",
-          "at": "2026-10-19T05:31:19.024Z",
-          "kind": "completion",
-          "agent": "worker-user:aworker",
-          "detail": "completed",
-          "sourceKey": "session-stop:a661fe87c7664ae15"
-        },
-        {
-          "id": "session-stop:aa7edec59a35eeeec:2026-10-19T05:49:13.112Z",
-          "at": "2026-10-19T05:49:13.112Z",
-          "kind": "completion",
-          "agent": "worker-user:aworker",
-          "detail": "completed",
-          "sourceKey": "session-stop:aa7edec59a35eeeec"
+          "sourceKey": "session-stop:a8d31d0406a92e0b9"
         }
       ]
     }

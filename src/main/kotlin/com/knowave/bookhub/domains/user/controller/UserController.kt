@@ -1,16 +1,14 @@
 package com.knowave.bookhub.domains.user.controller
 
 import com.knowave.bookhub.common.dto.PageResponse
+import com.knowave.bookhub.common.security.CurrentUser
+import com.knowave.bookhub.common.security.UserPrincipal
 import com.knowave.bookhub.domains.user.controller.dto.ApprovedLibrarianResponse
 import com.knowave.bookhub.domains.user.controller.dto.PendingLibrarianResponse
 import com.knowave.bookhub.domains.user.service.UserService
 import org.springframework.data.domain.Pageable
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
-import java.util.UUID
+import org.springframework.web.bind.annotation.*
+import java.util.*
 
 @RestController
 @RequestMapping("/api/v1/users")
@@ -29,4 +27,8 @@ class UserController(
     @PostMapping("/librarians/{id}/approval")
     fun approvedLibrarian(@PathVariable id: UUID): ApprovedLibrarianResponse =
         ApprovedLibrarianResponse.from(userService.approveLibrarian(id))
+
+    // 동작 확인용
+    @GetMapping("/me")
+    fun getMe(@CurrentUser user: UserPrincipal) : UserPrincipal = user
 }

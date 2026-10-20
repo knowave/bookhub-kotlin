@@ -99,6 +99,12 @@
       "type": "file"
     },
     {
+      "path": "src/main/resources/application.yaml",
+      "accessCount": 3,
+      "lastAccessed": 1792462829561,
+      "type": "file"
+    },
+    {
       "path": "src/main/kotlin/com/knowave/bookhub/domains/library/entity/BookCopy.kt",
       "accessCount": 2,
       "lastAccessed": 1792133756532,
@@ -108,12 +114,6 @@
       "path": "src/main/kotlin/com/knowave/bookhub/common/exception/GlobalExceptionHandler.kt",
       "accessCount": 2,
       "lastAccessed": 1792136056495,
-      "type": "file"
-    },
-    {
-      "path": "src/main/resources/application.yaml",
-      "accessCount": 2,
-      "lastAccessed": 1792385632973,
       "type": "file"
     },
     {
@@ -192,6 +192,66 @@
       "path": "src/test/kotlin/com/knowave/bookhub/common/security/JwtProviderImplTest.kt",
       "accessCount": 1,
       "lastAccessed": 1792388718531,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/common/config/SecurityConfig.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792462828942,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/common/config/PasswordConfig.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792462829292,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/auth/controller/dto/LoginRequest.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792462853138,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/auth/controller/dto/LoginResponse.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792462853354,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/auth/controller/dto/SignUpMemberRequest.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792462853657,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/auth/controller/dto/SignUpLibrarianRequest.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792462853949,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/auth/controller/dto/SignUpResponse.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792462854579,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/user/controller/dto/ApprovedLibrarianResponse.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792462855016,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/user/controller/dto/PendingLibrarianResponse.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792462855205,
+      "type": "file"
+    },
+    {
+      "path": "src/main/kotlin/com/knowave/bookhub/domains/user/entity/User.kt",
+      "accessCount": 1,
+      "lastAccessed": 1792462855407,
       "type": "file"
     }
   ],
