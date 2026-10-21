@@ -13,6 +13,9 @@ import com.knowave.bookhub.domains.library.service.dto.BookCopyAction
 import com.knowave.bookhub.domains.library.service.dto.BookCopyResult
 import com.knowave.bookhub.domains.library.service.dto.ChangeBookCopyStatusCommand
 import com.knowave.bookhub.domains.library.service.dto.CreateBookCopyCommand
+import com.knowave.bookhub.domains.loan.service.LoanService
+import com.knowave.bookhub.domains.loan.service.dto.ClosedLoanRef
+import org.springframework.context.annotation.Lazy
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
@@ -23,7 +26,11 @@ import java.util.UUID
 class BookCopyServiceImpl(
     private val bookCopyRepository: BookCopyRepository,
     private val bookService: BookService,
-    private val libraryService: LibraryService
+    private val libraryService: LibraryService,
+    // B-5(복본 분실 → 대출 종료)와 UC-11(대출 생성 → 복본 필요)이 서로 반대 방향이라
+    // LoanServiceImpl ↔ BookCopyServiceImpl 생성자 순환이 된다. @Lazy로 프록시를 받아
+    // 첫 호출 시점에 해소한다. 분실 처리 경로에서만 쓰므로 기동 시 필요하지 않다.
+    @Lazy private val loanService: LoanService
 ) : BookCopyService {
 
     @Transactional
@@ -41,12 +48,13 @@ class BookCopyServiceImpl(
             library = library,
         )
 
-        return BookCopyResult.from(bookCopyRepository.save(bookCopy))
+        return BookCopyResult.from(bookCopyRepository.save(bookCopy), closedLoan = null)
     }
 
     @Transactional
     override fun changeStatus(command: ChangeBookCopyStatusCommand): BookCopyResult {
         val bookCopy = getBookCopyEntity(command.bookCopyId)
+        var closedLoan: ClosedLoanRef? = null
 
         when (command.action) {
             BookCopyAction.DAMAGE_REPORT -> {
@@ -70,12 +78,14 @@ class BookCopyServiceImpl(
                 if (bookCopy.status != BookCopyStatus.AVAILABLE && bookCopy.status != BookCopyStatus.LOANED) {
                     throw BookCopyInvalidTransitionException(command.bookCopyId, bookCopy.status)
                 }
-                // TODO: 대출 중 복본 분실 시 해당 대출도 LOST로 종료해야 한다 (→ B-5). Loan 도메인 구현 시 추가
-                bookCopy.markAsLost()
+                // 대출 중이던 복본이면 그 대출도 함께 종료한다 (→ B-5).
+                // Loan.loseCopy()가 복본까지 LOST로 바꾸므로 여기서 markAsLost()를 또 부르지 않는다.
+                closedLoan = loanService.closeLoanForLostCopy(command.bookCopyId)
+                if (closedLoan == null) bookCopy.markAsLost()
             }
         }
 
-        return BookCopyResult.from(bookCopy)
+        return BookCopyResult.from(bookCopy, closedLoan)
     }
 
     override fun getBookCopyEntity(bookCopyId: UUID): BookCopy =

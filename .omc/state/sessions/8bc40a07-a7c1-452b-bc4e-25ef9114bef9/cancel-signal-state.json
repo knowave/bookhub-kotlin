@@ -1,8 +1,0 @@
-{
-  "active": true,
-  "requested_at": "2026-10-20T02:25:45.182Z",
-  "expires_at": "2026-10-20T02:26:15.182Z",
-  "mode": "deep-interview",
-  "source": "state_clear",
-  "target_state_sha256": "f8bf2cbb98f49adc3eb656f4c7649c6e467bfa34783ab74449ce452db17c98cb"
-}
