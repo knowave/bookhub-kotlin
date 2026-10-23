@@ -1,5 +1,6 @@
 package com.knowave.bookhub.domains.auth
 
+import com.knowave.bookhub.common.security.JwtProvider
 import com.knowave.bookhub.domains.auth.service.AuthServiceImpl
 import com.knowave.bookhub.domains.auth.service.dto.SignUpLibrarianCommand
 import com.knowave.bookhub.domains.auth.service.dto.SignUpMemberCommand
@@ -13,18 +14,20 @@ import io.mockk.every
 import io.mockk.mockk
 import io.mockk.slot
 import org.springframework.security.crypto.password.PasswordEncoder
-import java.util.UUID
+import java.util.*
 
 class AuthServiceUnitTest : DescribeSpec({
 
     lateinit var userService: UserService
     lateinit var passwordEncoder: PasswordEncoder
     lateinit var sut: AuthServiceImpl
+    lateinit var jwtProvider: JwtProvider
 
     beforeEach {
         userService = mockk()
         passwordEncoder = mockk()
-        sut = AuthServiceImpl(userService, passwordEncoder)
+        jwtProvider = mockk()
+        sut = AuthServiceImpl(userService, passwordEncoder, jwtProvider)
     }
 
     describe("signUpMember") {

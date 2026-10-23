@@ -57,7 +57,7 @@ dependencies {
 	testImplementation("io.kotest:kotest-assertions-core:6.2.5")
 	testImplementation("io.mockk:mockk:1.14.11")
 	testImplementation("io.kotest:kotest-extensions-spring:6.2.5")
-
+	testImplementation("org.testcontainers:testcontainers-junit-jupiter")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
