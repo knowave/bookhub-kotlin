@@ -3,11 +3,7 @@ package com.knowave.bookhub.domains.library.service
 import com.knowave.bookhub.domains.book.service.BookService
 import com.knowave.bookhub.domains.library.entity.BookCopy
 import com.knowave.bookhub.domains.library.entity.BookCopyStatus
-import com.knowave.bookhub.domains.library.exception.BookCopyCallNumberDuplicatedException
-import com.knowave.bookhub.domains.library.exception.BookCopyInvalidTransitionException
-import com.knowave.bookhub.domains.library.exception.BookCopyLoanedCannotDamageException
-import com.knowave.bookhub.domains.library.exception.BookCopyNotDamagedException
-import com.knowave.bookhub.domains.library.exception.BookCopyNotFoundException
+import com.knowave.bookhub.domains.library.exception.*
 import com.knowave.bookhub.domains.library.repository.BookCopyRepository
 import com.knowave.bookhub.domains.library.service.dto.BookCopyAction
 import com.knowave.bookhub.domains.library.service.dto.BookCopyResult
@@ -19,7 +15,7 @@ import org.springframework.context.annotation.Lazy
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
-import java.util.UUID
+import java.util.*
 
 @Service
 @Transactional(readOnly = true)
@@ -90,5 +86,9 @@ class BookCopyServiceImpl(
 
     override fun getBookCopyEntity(bookCopyId: UUID): BookCopy =
         bookCopyRepository.findByIdOrNull(bookCopyId)
+            ?: throw BookCopyNotFoundException(bookCopyId)
+
+    override fun getBookCopyEntityForLock(bookCopyId: UUID): BookCopy =
+        bookCopyRepository.findWithLockById(bookCopyId)
             ?: throw BookCopyNotFoundException(bookCopyId)
 }

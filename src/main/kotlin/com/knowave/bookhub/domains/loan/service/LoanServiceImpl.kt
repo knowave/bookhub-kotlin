@@ -30,7 +30,7 @@ class LoanServiceImpl(
     override fun createLoan(command: CreateLoanCommand): LoanResult {
         val today = LocalDate.now()
 
-        val bookCopy = bookCopyService.getBookCopyEntity(command.bookCopyId)
+        val bookCopy = bookCopyService.getBookCopyEntityForLock(command.bookCopyId)
         if (bookCopy.library.id != command.caller.libraryId) {
             throw LoanAccessDeniedLibraryException(command.bookCopyId)
         }

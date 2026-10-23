@@ -4,7 +4,7 @@ import com.knowave.bookhub.domains.library.entity.BookCopy
 import com.knowave.bookhub.domains.library.service.dto.BookCopyResult
 import com.knowave.bookhub.domains.library.service.dto.ChangeBookCopyStatusCommand
 import com.knowave.bookhub.domains.library.service.dto.CreateBookCopyCommand
-import java.util.UUID
+import java.util.*
 
 interface BookCopyService {
 
@@ -30,4 +30,17 @@ interface BookCopyService {
      * 존재하지 않으면 BookCopyNotFoundException.
      */
     fun getBookCopyEntity(bookCopyId: UUID): BookCopy
+
+    /**
+     * 수정을 전제로 복본을 조회한다.
+     *
+     * 조회 시점부터 트랜잭션이 끝날 때까지 다른 트랜잭션이 이 행을 읽거나 수정할 수 없다.
+     * "상태를 검사하고 바로 변경한다"가 원자적이어야 하는 경우에만 쓴다.
+     * 동시 대출 시 같은 복본이 여러 번 나가는 것을 막기 위한 것이다 (→ I-2).
+     *
+     * 단순 조회에는 getBookCopyEntity를 쓴다. 락은 대기 비용이 있다.
+     *
+     * 존재하지 않으면 BookCopyNotFoundException.
+     */
+    fun getBookCopyEntityForLock(bookCopyId: UUID): BookCopy
 }
